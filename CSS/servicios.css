@@ -1,0 +1,166 @@
+/* Fuentes - Probar otras en remplazo de Aboreto*/
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lato:wght@300&display=swap');
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Css del body - Imagen bg no definitiva */
+body{
+    background-image: url(../imagenes/background-2076336_1280.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+/* Css del nav */
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;    
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 15px 15px;
+    font-size: 0;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+    nav ul li{
+        display: inline-block;
+    }
+        nav ul li a{
+             text-decoration: none;
+             color:rgb(2, 2, 2);
+            font-family:'Aboreto', sans-serif;
+             font-size: 2.5rem;
+             font-weight: 600;
+             margin-right: 15px;
+             margin-left: 15px;
+        }
+
+.navegador{
+    background-color:rgba(103, 148, 54, 0.85);
+}
+
+/* Css del header */
+header img{
+    width: 100%;
+    height: auto;
+}
+.mainsection{
+    text-align: center;
+    font-weight: 600;
+    
+}
+.mainsection__tittle{
+    color: rgb(235, 242, 250); 
+    background-color: rgba(5, 102, 141, 0.9);
+    font-size: 3rem;
+    font-family: 'Aboreto', sans-serif;
+    padding: 20px 20px;
+    border-style: solid;
+    border-color: black;
+}
+.mainsection__text{
+    color: rgb(2, 2, 2);
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    margin: 30px auto;
+    width: 60%;
+    font-style: italic;
+    }
+    
+.secondarysection{
+    text-align: center;
+    font-weight: 600;
+}
+
+.secondarysection__tittle{
+    color: rgb(235, 242, 250);
+    background-color: rgba(5, 102, 141, 0.7);
+    font-size: 2.5rem;
+    font-family: 'Aboreto', sans-serif;
+    border-style: solid;
+    border-color: black;
+    padding: 20px 20px;
+    margin-bottom: 30px;   
+}
+.secondarysection__tittle--greenBg{
+    background-color: rgba(103, 148, 54, 0.5);
+    font-size: 3rem;
+    color:rgb(2, 2, 2);
+}
+.secondarysection__text{
+    color: rgb(2, 2, 2); 
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    margin-top: 30px;
+    line-height: 2.8rem ;
+    margin-bottom: 30px;
+}
+.secondarysection__text--big{
+    color: rgb(2, 2, 2); 
+    font-size: 2.5rem;
+    font-family: 'Aboreto', sans-serif;
+    margin-top:30px;
+    line-height: 2.8rem ;
+    margin-bottom: 30px
+}
+.secondarysection__text--bottomMargin{
+    color: rgb(2, 2, 2); 
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    margin-top: 30px;
+    line-height: 2.8rem ;
+    margin-bottom: 60px;
+}
+
+
+section.secondarysection div article img{
+    border-radius: 50%;
+    height: 250px;
+}
+
+section.secondarysection div article{
+    display: inline-block;
+    margin: 30px 35px;
+    width: 40%;
+    vertical-align: top;
+    height: auto
+}
+.secondarysection__article--width{
+    width: 45%;
+    margin: 0px auto; 
+}
+.secondarysection__image--radius{
+    border-radius: 50%;
+    height: 250px;
+}
+
+
+
+
+    /* Css de footer */
+footer{
+    text-align: center;
+    background-color: rgba(5, 102, 141, 0.9);
+    padding: 5px 5px;
+    
+}
+footer h3{
+    color: rgb(235, 242, 250);
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-family: 'Aboreto', sans-serif;
+    margin-top: 15px;
+}
+footer a img{
+    margin: 15px 15px;
+    width: 60px;
+}

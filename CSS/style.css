@@ -24,7 +24,8 @@ nav{
     left: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;      
+    align-items: center;
+    z-index: 1;      
 }  
 
 nav ul{
@@ -71,10 +72,21 @@ header img{
     color: rgba(103, 148, 54, 1);
     font-size: 5.5rem;
     font-family: 'Aboreto', sans-serif;
-    padding: 20px 20px;
-    width: 30%;
-    
+    margin: 20px 70px;
+    width: 20%;    
 }
+.mainsection__tittle--subrayado{
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 4px;
+    transition: background-size .8s;
+}
+.mainsection__tittle--subrayado:hover,
+.mainsection__tittle--subrayado:focus{
+    background-size: 100% 4px;
+}
+
 .mainsection__text{
     color: rgb(2, 2, 2);
     font-size: 2rem;
@@ -143,6 +155,43 @@ section.secondarysection article{
     text-decoration: none;  
 }
 
+.secondarysection__article--borde{
+    position: relative;
+    
+}
+.secondarysection__article--borde::before{
+    content:'';
+    position: absolute;
+    border-bottom: 4px transparent solid;
+    border-left: 4px transparent solid;
+    box-sizing: border-box;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+.secondarysection__article--borde::after{
+    content:'';
+    position: absolute;
+    box-sizing: border-box;
+    border-top: 4px transparent solid;
+    border-right: 4px transparent solid;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    transition: 1s ease-in-out;
+}
+.secondarysection__article--borde:hover::after,
+.secondarysection__article--borde:hover::before{
+    width: 100%;
+    height: 100%;
+    border-color: rgba(5, 102, 141, 0.6);
+}
+
+
+
 .thirdsection{
     text-align: center;
     font-weight: 600;
@@ -171,6 +220,19 @@ section.secondarysection article{
     margin-top: 10px;
     line-height: 2.8rem ;
     margin-bottom: 30px;
+}
+.thirdsection--scale{
+    transition: transform 0.3s linear;
+       
+}
+.thirdsection--scale:hover{
+    transform: scale(1.2);
+    background-color: rgba(103, 148, 54, 1);
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    
 }
 
 

@@ -17,7 +17,6 @@ body{
     
 } 
 /* Css del nav */
-holissss
 nav{
     position: sticky;
     top: 0;
@@ -73,6 +72,7 @@ header img{
     margin-top: 30px;
     margin-bottom: 30px;
     display: inline-block;
+    font-weight: 600;
 }
 .mainsection__tittle--subrayado{
     background-image: linear-gradient(currentColor, currentColor);
@@ -92,26 +92,19 @@ header img{
     font-family: 'Lato', sans-serif;
     margin: 30px;
     }
-.mainsection--flex{
+/* .mainsection--flex{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 
-}
-.mainsection__text--width{
-    width: 40%;
-}
-/* .mainsection__img--widht{
-    width: 30%;
-}
-.mainsection__img--size{
-    height: 350px;
-    margin: 30px;
 } */
+.mainsection__text--width{
+    width: 35%;
+}
 
 #animacion{
-    width: 450px;
+    width: 30%;
     height: 400px;
     margin: 30px;
     background-position: 0 0;
@@ -150,6 +143,7 @@ header img{
     font-family: 'Aboreto', sans-serif;
     padding-top: 50px;
     display: inline-block;
+    font-weight: 600;
     
 }
 .finalsection__text{
@@ -159,11 +153,11 @@ header img{
     line-height: 3.5rem;
     margin-top: 50px;
 }
-.finalsection--flex{
+/* .finalsection--flex{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
+} */
 .finalsection__figure--width{
     width: 25%;
     margin: 60px 60px;
@@ -182,6 +176,7 @@ section.finalsection div h3{
     font-family: 'Aboreto', sans-serif;
     margin-top: 15px;
     color: rgba(103, 148, 54, 1);
+    font-weight: 600;
    
 }
 section.finalsection div p{
@@ -210,10 +205,10 @@ section.finalsection div p{
     font-weight: 600;
     text-align: center;
     background-color: rgba(103, 148, 54, .5);
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: column; */
     padding: 30px;
 }
 
@@ -222,6 +217,7 @@ section.finalsection div p{
     font-size: 3rem;
     margin-bottom: 30px;
     color: black;
+    font-weight: 600;
 }
 
 .aside__list{
@@ -279,7 +275,7 @@ aside.aside2 ul li img{
 } */
 
 /* GRID */
-.container{
+/* .containercss{
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
@@ -287,10 +283,10 @@ aside.aside2 ul li img{
     "main main aside1"
     "final final final"
     ;
-}
+} */
 
 
-#main{
+/* #main{
     grid-area: main;
 }
 #final{
@@ -298,7 +294,7 @@ aside.aside2 ul li img{
 }
 #aside1{
     grid-area: aside1;
-}
+} */
 
 /* Css de footer */
 footer{
@@ -318,7 +314,7 @@ footer a img{
 }
 
 
-@media (max-width: 320px){
+@media (max-width: 576px){
     nav{
         position: sticky;
         top: 0;
@@ -352,14 +348,14 @@ footer a img{
         margin: 0 0;
     }
 
-    .container{
+    /* .container{
         grid-template-columns: 100vw;
         grid-template-areas: 
         "main"
         "aside1"
         "final"
         ;
-    }
+    } */
 
     .mainsection__tittle{
         font-size: 3rem;
@@ -381,12 +377,10 @@ footer a img{
     .mainsection__text--width{
         width: 100vw;
     }
-    .mainsection__img--widht{
-        width: 100vw;
-    }
-    .mainsection__img--size{
-        height: 150px;
-        margin: 30px;
+    
+    #animacion{
+        width: 80vw;
+        margin: 30px auto;
     }
    
     .finalsection__tittle{

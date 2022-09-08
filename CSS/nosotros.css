@@ -71,7 +71,7 @@ header img{
     font-family: 'Aboreto', sans-serif;
     margin-top: 30px;
     margin-bottom: 30px;
-    display: inline-block;
+    display:inline-block;
     font-weight: 600;
 }
 .mainsection__tittle--subrayado{
@@ -230,10 +230,10 @@ aside.aside ul li{
     font-size: 2rem;
     line-height: 3rem;
     margin: 20px;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     font-family: 'Lato', sans-serif;
-    text-align: left;
+    /* text-align: left; */
 }
 aside.aside ul li img{
     margin-right: 20px;
@@ -348,7 +348,7 @@ footer a img{
         margin: 0 0;
     }
 
-    /* .container{
+    /* .containercss{
         grid-template-columns: 100vw;
         grid-template-areas: 
         "main"
@@ -359,18 +359,17 @@ footer a img{
 
     .mainsection__tittle{
         font-size: 3rem;
-        padding: 10px 10px;
-        margin-bottom: 10px;
+        padding: 0px 0px;
+        margin-bottom: 0px;
         
     }
     .mainsection__text{
-        font-size: 1.7rem;
-        margin: 0px;
+        font-size: 2rem;
+        margin: 30px 0;
         padding-right: 25px;
         padding-left: 25px;
         }
-    .mainsection--flex{
-        flex-direction: column;
+    .mainsection{
         margin-bottom: 15px;
     
     }
@@ -393,10 +392,10 @@ footer a img{
         line-height: 3.5rem;
         margin-top: 15px;
     }
-    .finalsection--flex{
+    /* .finalsection--flex{
         align-items: center;
         flex-direction: column;
-    }
+    } */
     .finalsection__figure--width{
         width: 100vw;
         margin-top: 15px;

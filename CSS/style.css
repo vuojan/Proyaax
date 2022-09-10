@@ -142,6 +142,7 @@ section.secondarysection article{
     font-size: 5rem;
     font-family: 'Aboreto', sans-serif;
     margin-bottom: 50px;
+    display: inline-block;
 }
 
 .secondarysection__text{
@@ -157,6 +158,7 @@ section.secondarysection article{
 
 .secondarysection__article--borde{
     position: relative;
+    height: 500px;
     
 }
 .secondarysection__article--borde::before{

@@ -73,7 +73,7 @@ header img{
     font-size: 5.5rem;
     font-family: 'Aboreto', sans-serif;
     margin: 20px 70px;
-    width: 20%;    
+    width: auto  
 }
 .mainsection__tittle--subrayado{
     background-image: linear-gradient(currentColor, currentColor);
@@ -197,31 +197,42 @@ section.secondarysection article{
 .thirdsection{
     text-align: center;
     font-weight: 600;
-    background-color: rgba(5, 102, 141, 0.65);
+    background-color:rgba(5, 102, 141, 0.4);
+    border-top: solid;
+    border-bottom: solid;
 }
 .thirdsection__tittle{
-    color: white;
+    color: black;
     font-size: 5rem;
     font-family: 'Aboreto', sans-serif;
     margin-top: 60px;
+    
 }
 .thirdsection__tittle--img{
     height: 350px;
 }
 .thirdsection__subtittle{
-    color: white;
-    font-size: 4rem;
-    font-family: 'Aboreto', sans-serif;
-    
-    
+    color: black;
+    font-size: 2.5rem;
+    font-family: 'Aboreto', sans-serif; 
+    text-decoration: underline;     
 }
+.thirdsection__subtittle--img{
+    height: 160px;
+    width: 280px;
+    border-radius: 15%;
+    margin-bottom: 20px;
+    border: solid;
+    border-width: thin;
+
+}
+
 .thirdsection__subtittle--text{
     color: rgb(2, 2, 2); 
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: 'Lato', sans-serif;
     margin-top: 10px;
-    line-height: 2.8rem ;
-    margin-bottom: 30px;
+    line-height: 2.5rem ;
 }
 .thirdsection--scale{
     transition: transform 0.3s linear;
@@ -230,8 +241,8 @@ section.secondarysection article{
 .thirdsection--scale:hover{
     transform: scale(1.2);
     background-color: rgba(103, 148, 54, 1);
-    border-top-left-radius: 30%;
-    border-top-right-radius: 30%;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
     border-bottom-left-radius: 15%;
     border-bottom-right-radius: 15%;
     
@@ -257,15 +268,51 @@ section.secondarysection article{
 }
 #proyectos{
     grid-area: proyectos;
+    border: solid;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    border-width: thin;
+    background-color: white;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
 }
 #urbanizaciones{
     grid-area: urb;
+    border: solid;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    border-width: thin;
+    background-color: white;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
 }
 #empresas{
     grid-area: emp;
+    border: solid;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    border-width: thin;
+    background-color: white;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
 }
 #organismos{
     grid-area: org;
+    border: solid;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    border-width: thin;
+    background-color: white;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
 }
 
 
@@ -273,7 +320,7 @@ section.secondarysection article{
 .finalsection{
     text-align: center;
     font-weight: 600;
-    background-color: white;
+    background-color: rgb(235, 242, 250);
 }
 
 /* Box modeling articulos dentro de finalsection */
@@ -285,7 +332,10 @@ section.finalsection article{
     color: rgba(103, 148, 54, 1); 
     font-size: 5rem;
     font-family: 'Aboreto', sans-serif;
-    padding: 60px 30px 30px 30px;
+    /* padding: 60px 30px 30px 30px; */
+    display: inline-block;
+    padding: 60px 0 0 0;
+    margin-bottom: 30px;
 }
 
 .finalsection--flex{

@@ -1,5 +1,4 @@
 
-/* Fuentes - Probar otras en remplazo de Aboreto*/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 html{
     font-size: 62.5%;
@@ -8,7 +7,7 @@ html{
     margin: 0;
     padding: 0;
 }
-
+/* Css del body */
 body{
     background-color: white;
     
@@ -21,8 +20,9 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;      
+    z-index: 10;      
 }  
+
 
 nav ul{
     list-style-type: none;
@@ -54,7 +54,10 @@ header img{
     margin-bottom: 50px;
 }
 
-/* Css del main - Practicando BEM */
+/* Css del main */
+
+/* Css de mainsection */
+
 .mainsection{
     text-align: center;
     font-weight: 200;
@@ -71,8 +74,14 @@ header img{
     margin: 20px 70px;
     display: inline-block;
     width: 18vw;
-    font-weight: 600; 
+    font-weight: 600;
+    animation: fadein 2s ease-in; 
 }
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }  
+}
+
 .mainsection__tittle--color{
     color: rgba(103, 148, 54, 0.8);
 }
@@ -101,6 +110,9 @@ header img{
 .mainsection__text--color{
     color: rgba(103, 148, 54, 0.9);
 }
+
+/* Css de secondary section */
+
 .secondarysection{
     text-align: center;
     padding: 50px 0px;
@@ -112,7 +124,6 @@ header img{
     align-items: flex-end;
 }
 
-/* Box modeling de los articulos dentro de secondarysection */
 section.secondarysection article{
     width: 20vw;
     padding: 30px 10px;
@@ -208,10 +219,18 @@ section.secondarysection article{
     border-radius: 10px;
     z-index: 2;
     position: relative;
+    
+
 }
 .secondarysection__article--boton:hover{
     background-color: rgba(5, 102, 141, 1);
 }
+.secondarysection__article--txtdecoration{
+    text-decoration: none;
+    color:inherit;
+}
+
+/* Css de thirdsection */
 
 .thirdsection{
     text-align: center;
@@ -238,7 +257,6 @@ section.secondarysection article{
     font-weight: 200;    
 }
 .thirdsection__subtittle--img{
-    height: auto;
     width: 14vw;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -262,9 +280,17 @@ section.secondarysection article{
     border-radius: 10px;
     
 }
+.thirdsection__article{
 
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-/* GRID */
+}
+
+/* GRID de thirdsection*/
 .container{
     display: grid;
     grid-template-columns: repeat(4,18%);
@@ -273,7 +299,7 @@ section.secondarysection article{
     "proyectos areas areas urb"
     "emp areas areas org";
     justify-content: center;
-    align-content: start;
+    align-items: start;
     padding-top: 30px;
 }
 #areas{
@@ -298,23 +324,13 @@ section.secondarysection article{
  
 }
 
-.thirdsection__article{
-
-    padding: 30px 30px;
-    margin-bottom: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
+/* Css de finalsection */
 
 .finalsection{
     text-align: center;
     background-color: rgb(235, 242, 250, 0.7);
 }
 
-/* Box modeling articulos dentro de finalsection */
 section.finalsection article{
     padding: 15px 15px;
 }
@@ -340,7 +356,6 @@ section.finalsection article{
     margin: 30px;
 }
 
-/* Selectores de etiquetas de seccion final */
 section.finalsection article h3{
     color:rgba(5, 102, 141, 1);
     font-weight: 200;
@@ -357,8 +372,6 @@ section.finalsection article ul{
     font-size: 2rem;
     line-height: 3rem;
     font-family: 'Lato', sans-serif;
-   
-
 }
 section.finalsection article p{
     font-weight: 400;
@@ -372,8 +385,8 @@ article iframe{
     margin-bottom: 20px;
 }
 
-
 /* Css de footer */
+
 footer{
     text-align: center;
     background-color: rgba(5, 102, 141, 0.6);
@@ -389,6 +402,8 @@ footer h3{
 footer a img{
     margin: 15px 15px;
 }
+
+/* Breakpoint mobile */
 
 @media (max-width: 576px){
     nav{
@@ -436,9 +451,10 @@ footer a img{
         margin: 0px 0px 20px 0px;
         line-height: 3rem;
         padding: 0px 20px;
+        font-size: 1.7rem;
         }
     .mainsection__text--widht{
-        width: 100vw;
+        width: 80vw;
     }    
     .secondarysection{
         padding: 10px 10px;
@@ -449,7 +465,7 @@ footer a img{
         flex-direction: column;
     }
     section.secondarysection article{
-        width: 100vw;
+        width: 80vw;
         padding: 15px 15px;
         height: auto;
         margin-bottom: 25px;
@@ -481,8 +497,9 @@ footer a img{
         "urb"
         "emp"
         "org";
-        align-content: center;
+        align-items: center;
         padding-top: 15px;
+        justify-items: center;
         
     }
 
@@ -506,7 +523,7 @@ footer a img{
         font-size: 1.7rem;
         margin-top: 10px;
         line-height: 2.8rem ;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         padding-right: 15px;
         padding-left: 15px;
         
@@ -514,14 +531,16 @@ footer a img{
     .thirdsection__subtittle--img{
         width: 80vw;
     }
-    
-    /* Box modeling articulos dentro de finalsection */
+
+    .thirdsection__article{
+        width: 80vw;
+    }
+
     section.finalsection article{
         padding: 15px 15px;
     }
     
     .finalsection__tittle{
-        color: rgba(103, 148, 54, 1); 
         font-size: 3rem;
         font-family: 'Aboreto', sans-serif;
         padding: 30px 0px 0px 0px;
@@ -537,7 +556,6 @@ footer a img{
         margin-bottom: 30px;
     }
    
-    /* Selectores de etiquetas de seccion final */
     section.finalsection article h3{
         font-size: 2.5rem;      
     }
@@ -546,10 +564,6 @@ footer a img{
         height: auto;
         width: 90vw;
         margin-bottom: 20px;
-    }
-
-
-   
-
+    }  
        
 }

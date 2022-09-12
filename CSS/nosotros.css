@@ -1,4 +1,4 @@
-/* Fuentes - Probar otras en remplazo de Aboreto*/
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 html{
     font-size: 62.5%;
@@ -7,7 +7,7 @@ html{
     margin: 0;
     padding: 0;
 }
-/* Css del body - Imagen bg no definitiva */
+/* Css del body */
 body{
     background-color: white;
     
@@ -54,7 +54,31 @@ header img{
     
 }
 
-/* Css del main - Practicando BEM */
+/* Css del main */
+
+/* GRID */
+.container{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main main aside1"
+    "final final final"
+    ;
+}
+
+#main{
+    grid-area: main;
+}
+#final{
+    grid-area: final;
+}
+#aside1{
+    grid-area: aside1;
+}
+
+/* Css de mainsection */
+
 .mainsection{
     text-align: center;
      
@@ -67,6 +91,7 @@ header img{
     margin-top: 30px;
     margin-bottom: 30px;
     display: inline-block;
+    font-weight: 600;
 }
 
 .mainsection__tittle--color{
@@ -127,7 +152,7 @@ header img{
     
 }
 
-
+/* Css de finalsection */
 
 .finalsection{
     text-align: center;
@@ -139,6 +164,7 @@ header img{
     font-family: 'Roboto', sans-serif;
     padding-top: 50px;
     display: inline-block;
+    font-weight: 600;
 }
 .finalsection__tittle--color{
     color: rgba(5, 102, 141, 0.8);
@@ -165,7 +191,6 @@ header img{
     background-color: rgb(235, 242, 250, 0.7);
 
 }
-
 
 section.finalsection div img{
     height: 350px;
@@ -226,11 +251,12 @@ section.finalsection div p{
     right: 0;
   }
 
+  /* Css de aside */
 
 .aside{
     font-weight: 200;
     text-align: center;
-    background-color: rgba(103, 148, 54, .35);
+    background-color: rgba(103, 148, 54, .25);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -243,17 +269,20 @@ section.finalsection div p{
 .aside__tittle{
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
-    margin-bottom: 30px;
-    color: black;
-    font-weight: 200;
+    margin-bottom: 15px;
+    color:rgba(5, 102, 141, 0.9);
+    font-weight: 600;
 }
 
 .aside__list{
     list-style: none;
+    
+        
 }
 .aside__list--img{
     border-radius: 50%;
 }
+
 aside.aside ul li{
     font-size: 2rem;
     line-height: 3rem;
@@ -262,69 +291,37 @@ aside.aside ul li{
     align-items: center;
     font-family: 'Lato', sans-serif;
     text-align: left;
+    animation: fadein 2s forwards;
+    opacity: 0;  
 }
+
 aside.aside ul li img{
     margin-right: 20px;
 }
 
-/* .aside2{
-    font-weight: 600;
-    text-align: center;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 30px;
+aside.aside ul li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+aside.aside ul li:nth-child(3) {
+    animation-delay: 1s;
+}
+aside.aside ul li:nth-child(4) {
+    animation-delay: 1.5s;
+}
+aside.aside ul li:nth-child(5) {
+    animation-delay: 2s;
+}
+aside.aside ul li:nth-child(6) {
+    animation-delay: 2.5s;
 }
 
-.aside2__tittle{
-    font-family: 'Aboreto', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 30px;
-    color: black;
-    border: 1px;
-    border-style: solid;
-}
-.aside2__list{
-    list-style: none;
-}
-aside.aside2 ul li{
-    font-size: 2rem;
-    line-height: 3rem;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    font-family: 'Lato', sans-serif;
-    text-align: left;
-}
-aside.aside2 ul li img{
-    margin-right: 20px;
-} */
-
-/* GRID */
-.container{
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "main main aside1"
-    "final final final"
-    ;
-}
-
-
-#main{
-    grid-area: main;
-}
-#final{
-    grid-area: final;
-}
-#aside1{
-    grid-area: aside1;
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }  
 }
 
 /* Css de footer */
+
 footer{
     text-align: center;
     background-color: rgba(5, 102, 141, 0.6);
@@ -341,6 +338,7 @@ footer a img{
     margin: 15px 15px;
 }
 
+/* Breakpoint mobile */
 
 @media (max-width: 576px){
     nav{
@@ -403,14 +401,11 @@ footer a img{
     
     }
     .mainsection__text--width{
-        width: 100vw;
+        width: 80vw;
     }
-    .mainsection__img--widht{
-        width: 100vw;
-    }
-    .mainsection__img--size{
-        height: 150px;
-        margin: 30px;
+    #animacion{
+        height: 350px;
+        width: 350px;
     }
    
     .finalsection__tittle{
@@ -428,7 +423,7 @@ footer a img{
         flex-direction: column;
     }
     .finalsection__figure--width{
-        width: 100vw;
+        width: 80vw;
         margin-top: 15px;
         margin-bottom: 50px;
         

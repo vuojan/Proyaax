@@ -8,13 +8,9 @@ html{
     margin: 0;
     padding: 0;
 }
-/* Css del body - Imagen bg no definitiva */
+
 body{
     background-color: white;
-    /* background-image: Me gusta mas sin imagen;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
     
 } 
 /* Css del nav */
@@ -61,7 +57,7 @@ header img{
 /* Css del main - Practicando BEM */
 .mainsection{
     text-align: center;
-    font-weight: 400;
+    font-weight: 200;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +70,7 @@ header img{
     font-family: 'Roboto', sans-serif;
     margin: 20px 70px;
     display: inline-block;
-    width: 20vw;
+    width: 18vw;
     font-weight: 600; 
 }
 .mainsection__tittle--color{
@@ -107,9 +103,8 @@ header img{
 }
 .secondarysection{
     text-align: center;
-    font-weight: 400;
     padding: 50px 0px;
-    background-color: rgb(235, 242, 250);
+    background-color: rgb(235, 242, 250, 0.7);
 }
 .secondarysection--flex{
     display: flex;
@@ -120,7 +115,7 @@ header img{
 /* Box modeling de los articulos dentro de secondarysection */
 section.secondarysection article{
     width: 20vw;
-    padding: 15px 15px;
+    padding: 30px 10px;
     margin-right: 10px;
     margin-left: 10px;
    }
@@ -134,14 +129,20 @@ section.secondarysection article{
     font-size: 2.5rem;
     font-family: 'Roboto', sans-serif;
     margin-top: 20px;
+    font-weight: 200;
 
 }
 .secondarysection__tittle--main{
-    color: rgba(103, 148, 54, 3);
+    color: rgba(5, 102, 141, 1);
     font-size: 5rem;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 50px;
     display: inline-block;
+    font-weight: 600;
+}
+
+.secondarysection__tittle--color{
+    color: rgba(5, 102, 141, 0.8);
 }
 
 .secondarysection__text{
@@ -150,6 +151,7 @@ section.secondarysection article{
     font-family: 'Lato', sans-serif;
     margin-top: 10px;
     line-height: 2.8rem ;
+    min-height: 140px;
 }
 .secondarysection__text--txtdec{
     text-decoration: none;  
@@ -157,7 +159,6 @@ section.secondarysection article{
 
 .secondarysection__article--borde{
     position: relative;
-    height: 50vh;
     
 }
 .secondarysection__article--borde::before{
@@ -168,9 +169,10 @@ section.secondarysection article{
     box-sizing: border-box;
     width: 0;
     height: 0;
-    bottom: 0;
-    left: 0;
+    bottom: 0px;
+    left: 0px;
     transition: 1s ease-in-out;
+    z-index: 1;
 }
 .secondarysection__article--borde::after{
     content:'';
@@ -180,14 +182,15 @@ section.secondarysection article{
     border-right: 4px transparent solid;
     width: 0;
     height: 0;
-    top: 0;
-    right: 0;
+    top: 0px;
+    right: 0px;
     transition: 1s ease-in-out;
+    z-index: 1;
 }
 .secondarysection__article--borde:hover::after,
 .secondarysection__article--borde:hover::before{
     width: 100%;
-    height: 100%;
+    height:100%;
     border-color: rgba(5, 102, 141, 0.6);
 }
 
@@ -195,13 +198,16 @@ section.secondarysection article{
     background-color: rgba(5, 102, 141, 0.8); 
     border: 1px solid black;
     color: white;
-    padding: 10px 15px;
-    font-size: 2rem;
+    padding: 7px 25px;
+    font-size: 1.7rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
+    font-weight: 200;
     margin-top: 20px;
     cursor: pointer;
     transition: all 0.5s;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
 }
 .secondarysection__article--boton:hover{
     background-color: rgba(5, 102, 141, 1);
@@ -210,7 +216,7 @@ section.secondarysection article{
 .thirdsection{
     text-align: center;
     font-weight: 400;
-    background-color:rgba(5, 102, 141, 0.15);
+    background-color: white;
 }
 .thirdsection__tittle{
     color:rgba(103, 148, 54, 1);   
@@ -226,17 +232,16 @@ section.secondarysection article{
     height: 18vh;
 }
 .thirdsection__subtittle{
-    color:rgb(2, 2, 2,0.75);
+    color:rgba(103, 148, 54, 1);
     font-size: 2.5rem;
-    font-family: 'Roboto', sans-serif;    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;    
 }
 .thirdsection__subtittle--img{
     height: auto;
     width: 14vw;
     border-radius: 10px;
     margin-bottom: 20px;
-    border: solid;
-    border-width: thin;
 
 }
 
@@ -246,6 +251,7 @@ section.secondarysection article{
     font-family: 'Lato', sans-serif;
     margin-top: 10px;
     line-height: 2.5rem ;
+    font-weight: 200;
 }
 .thirdsection--scale{
     transition: transform 0.3s linear;
@@ -277,59 +283,35 @@ section.secondarysection article{
 }
 #proyectos{
     grid-area: proyectos;
-    border: solid;
-    padding: 30px 30px;
-    margin-bottom: 30px;
-    border-width: thin;
-    background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+   
 }
 #urbanizaciones{
     grid-area: urb;
-    border: solid;
-    padding: 30px 30px;
-    margin-bottom: 30px;
-    border-width: thin;
-    background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+ 
 }
 #empresas{
     grid-area: emp;
-    border: solid;
-    padding: 30px 30px;
-    margin-bottom: 30px;
-    border-width: thin;
-    background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+   
 }
 #organismos{
     grid-area: org;
-    border: solid;
-    padding: 30px 30px;
-    margin-bottom: 30px;
-    border-width: thin;
-    background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+ 
 }
 
+.thirdsection__article{
+
+    padding: 30px 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
 
 
 .finalsection{
     text-align: center;
-    font-weight: 400;
-    background-color: white;
+    background-color: rgb(235, 242, 250, 0.7);
 }
 
 /* Box modeling articulos dentro de finalsection */
@@ -338,7 +320,7 @@ section.finalsection article{
 }
 
 .finalsection__tittle{
-    color: rgba(103, 148, 54, 1); 
+    color: rgba(5, 102, 141, 1);
     font-size: 5rem;
     font-family: 'Roboto', sans-serif;
     display: inline-block;
@@ -360,8 +342,8 @@ section.finalsection article{
 
 /* Selectores de etiquetas de seccion final */
 section.finalsection article h3{
-    color:rgb(2, 2, 2,0.75);
-    font-weight: 600;
+    color:rgba(5, 102, 141, 1);
+    font-weight: 200;
     font-size: 3rem;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;

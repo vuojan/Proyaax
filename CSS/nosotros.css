@@ -1,5 +1,5 @@
-/* Fuentes - Probar otras en remplazo de Aboreto*/
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lato:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 html{
     font-size: 62.5%;
 }
@@ -7,13 +7,9 @@ html{
     margin: 0;
     padding: 0;
 }
-/* Css del body - Imagen bg no definitiva */
+/* Css del body */
 body{
     background-color: white;
-    /* background-image: Me gusta mas sin imagen;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
     
 } 
 /* Css del nav */
@@ -40,9 +36,9 @@ nav ul{
     nav ul li a{
         text-decoration: none;
         color:rgb(2, 2, 2);
-        font-family:'Aboreto', sans-serif;
+        font-family:'Roboto', sans-serif;
         font-size: 2.5rem;
-        font-weight: 600;
+        font-weight: 400;
         margin-right: 15px;
         margin-left: 15px;
     }
@@ -58,20 +54,48 @@ header img{
     
 }
 
-/* Css del main - Practicando BEM */
+/* Css del main */
+
+/* GRID */
+.container{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main main aside1"
+    "final final final"
+    ;
+}
+
+#main{
+    grid-area: main;
+}
+#final{
+    grid-area: final;
+}
+#aside1{
+    grid-area: aside1;
+}
+
+/* Css de mainsection */
+
 .mainsection{
     text-align: center;
-    font-weight: 600;
-    
+     
     
 }
 .mainsection__tittle{
     color: rgba(103, 148, 54, 1);
-    font-size: 5.5rem;
-    font-family: 'Aboreto', sans-serif;
+    font-size: 5rem;
+    font-family: 'Roboto', sans-serif;
     margin-top: 30px;
     margin-bottom: 30px;
     display: inline-block;
+    font-weight: 600;
+}
+
+.mainsection__tittle--color{
+    color: rgba(103, 148, 54, 0.8);
 }
 .mainsection__tittle--subrayado{
     background-image: linear-gradient(currentColor, currentColor);
@@ -90,6 +114,7 @@ header img{
     line-height: 3rem;
     font-family: 'Lato', sans-serif;
     margin: 30px;
+    font-weight: 200;
     }
 .mainsection--flex{
     display: flex;
@@ -101,13 +126,6 @@ header img{
 .mainsection__text--width{
     width: 40%;
 }
-/* .mainsection__img--widht{
-    width: 30%;
-}
-.mainsection__img--size{
-    height: 350px;
-    margin: 30px;
-} */
 
 #animacion{
     width: 450px;
@@ -115,14 +133,12 @@ header img{
     margin: 30px;
     background-position: 0 0;
     animation-name: animacionmain;
-    animation-duration: 15s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top-right-radius: 20%;
-    border-top-left-radius: 20%;
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 20%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -136,20 +152,22 @@ header img{
     
 }
 
-
+/* Css de finalsection */
 
 .finalsection{
     text-align: center;
-    font-weight: 600;
-    background-color: rgb(235, 242, 250);
+    background-color: rgb(235, 242, 250, 0.7);
 }
 .finalsection__tittle{
-    color:rgba(103, 148, 54, 1);
+    color:rgba(5, 102, 141, 1);
     font-size: 5rem;
-    font-family: 'Aboreto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding-top: 50px;
     display: inline-block;
-    
+    font-weight: 600;
+}
+.finalsection__tittle--color{
+    color: rgba(5, 102, 141, 0.8);
 }
 .finalsection__text{
     color: rgb(2, 2, 2);
@@ -157,6 +175,7 @@ header img{
     font-size: 2.5rem;
     line-height: 3.5rem;
     margin-top: 50px;
+    font-weight: 200;
 }
 .finalsection--flex{
     display: flex;
@@ -164,23 +183,25 @@ header img{
     align-items: flex-start;
 }
 .finalsection__figure--width{
-    width: 25%;
+    width: 25vw;
     margin: 60px 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: rgb(235, 242, 250, 0.7);
 
 }
-
 
 section.finalsection div img{
     height: 350px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-radius: 10px;
 }
 section.finalsection div h3{
-    color:rgb(2, 2, 2);
     font-size: 2.5rem;
-    font-family: 'Aboreto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 15px;
-    color: rgba(103, 148, 54, 1);
+    color: rgba(5, 102, 141, 1);
+    font-weight: 200;
    
 }
 section.finalsection div p{
@@ -188,47 +209,80 @@ section.finalsection div p{
     font-size: 1.7rem;
     margin-top: 15px;
     color: rgb(2, 2, 2);
-    line-height: 3rem;    
+    line-height: 3rem;
+    font-weight: 200;    
 }
 
-.finalsection__figure--button{
-    background-color: rgba(103, 148, 54, .5); 
-    border: 1px solid black;
-    color: black;
-    padding: 10px 15px;
+.finalsection__figure--button {
+    background-color: rgba(5, 102, 141, 0.75);
+    color:white;
     font-size: 2rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    margin-top: 20px;
+    padding: 7px 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .finalsection__figure--button span {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .finalsection__figure--button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .finalsection__figure--button:hover span {
+    padding-right: 25px;
+  }
+  
+  .finalsection__figure--button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
-}
-.finalsection__figure--button:hover{
-    background-color: rgba(103, 148, 54, 0.75);
-}
+  /* Css de aside */
+
 .aside{
-    font-weight: 600;
+    font-weight: 200;
     text-align: center;
-    background-color: rgba(103, 148, 54, .5);
+    background-color: rgba(103, 148, 54, .25);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     padding: 30px;
+    border: solid;
+    border-width: 1px 0px 1px 1px;
 }
 
 .aside__tittle{
-    font-family: 'Aboreto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 3rem;
-    margin-bottom: 30px;
-    color: black;
+    margin-bottom: 15px;
+    color:rgba(5, 102, 141, 0.9);
+    font-weight: 600;
 }
 
 .aside__list{
     list-style: none;
+    
+        
 }
 .aside__list--img{
     border-radius: 50%;
 }
+
 aside.aside ul li{
     font-size: 2rem;
     line-height: 3rem;
@@ -237,69 +291,37 @@ aside.aside ul li{
     align-items: center;
     font-family: 'Lato', sans-serif;
     text-align: left;
+    animation: fadein 2s forwards;
+    opacity: 0;  
 }
+
 aside.aside ul li img{
     margin-right: 20px;
 }
 
-/* .aside2{
-    font-weight: 600;
-    text-align: center;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 30px;
+aside.aside ul li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+aside.aside ul li:nth-child(3) {
+    animation-delay: 1s;
+}
+aside.aside ul li:nth-child(4) {
+    animation-delay: 1.5s;
+}
+aside.aside ul li:nth-child(5) {
+    animation-delay: 2s;
+}
+aside.aside ul li:nth-child(6) {
+    animation-delay: 2.5s;
 }
 
-.aside2__tittle{
-    font-family: 'Aboreto', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 30px;
-    color: black;
-    border: 1px;
-    border-style: solid;
-}
-.aside2__list{
-    list-style: none;
-}
-aside.aside2 ul li{
-    font-size: 2rem;
-    line-height: 3rem;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    font-family: 'Lato', sans-serif;
-    text-align: left;
-}
-aside.aside2 ul li img{
-    margin-right: 20px;
-} */
-
-/* GRID */
-.container{
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "main main aside1"
-    "final final final"
-    ;
-}
-
-
-#main{
-    grid-area: main;
-}
-#final{
-    grid-area: final;
-}
-#aside1{
-    grid-area: aside1;
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }  
 }
 
 /* Css de footer */
+
 footer{
     text-align: center;
     background-color: rgba(5, 102, 141, 0.6);
@@ -309,15 +331,16 @@ footer h3{
     color:rgb(235, 242, 250);
     font-weight: 600;
     font-size: 1.8rem;
-    font-family: 'Aboreto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 15px;
 }
 footer a img{
     margin: 15px 15px;
 }
 
+/* Breakpoint mobile */
 
-@media (max-width: 320px){
+@media (max-width: 576px){
     nav{
         position: sticky;
         top: 0;
@@ -378,14 +401,11 @@ footer a img{
     
     }
     .mainsection__text--width{
-        width: 100vw;
+        width: 80vw;
     }
-    .mainsection__img--widht{
-        width: 100vw;
-    }
-    .mainsection__img--size{
-        height: 150px;
-        margin: 30px;
+    #animacion{
+        height: 350px;
+        width: 350px;
     }
    
     .finalsection__tittle{
@@ -403,7 +423,7 @@ footer a img{
         flex-direction: column;
     }
     .finalsection__figure--width{
-        width: 100vw;
+        width: 80vw;
         margin-top: 15px;
         margin-bottom: 50px;
         

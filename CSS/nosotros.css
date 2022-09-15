@@ -129,8 +129,9 @@ header img{
 
 #animacion{
     width: 450px;
-    height: 400px;
+    height: 350px;
     margin: 30px;
+    margin-left: 50px;
     background-position: 0 0;
     animation-name: animacionmain;
     animation-duration: 20s;
@@ -193,7 +194,7 @@ header img{
 }
 
 section.finalsection div img{
-    height: 350px;
+    width: 20vw;
     border-radius: 10px;
 }
 section.finalsection div h3{
@@ -429,7 +430,7 @@ footer a img{
         
     }
     section.finalsection div img{
-        height: 250px;
+        width: 60vw;
     }
     section.finalsection div h3{
         font-size: 2rem;

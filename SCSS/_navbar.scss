@@ -6,6 +6,18 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 576px){
+        flex-direction: column;
+        justify-content: center;
+    }
+    @media (max-width: 576px){
+        a{
+            img{
+                width: 200px;
+                object-fit: cover;
+            }
+        }
+    }
     ul{
         list-style-type: none;
         padding: 15px 15px;
@@ -14,18 +26,28 @@ nav{
         justify-content: center;
         text-align: center;
         width: 100%;
-    }
-    li{
-        a{
-            text-decoration: none;
-            color:rgb(2, 2, 2);
-            font-family:'Roboto', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin-right: 15px;
-            margin-left: 15px;  
+        @media (max-width: 576px){
+            flex-direction: column;
         }
-    }     
+        li{
+            @media (max-width: 576px){
+                margin: 3px 0;
+            }
+            a{
+                text-decoration: none;
+                color:rgb(2, 2, 2);
+                font-family:'Roboto', sans-serif;
+                font-size: 2.5rem;
+                font-weight: 400;
+                margin-right: 15px;
+                margin-left: 15px;
+                @media (max-width: 576px){
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }  
+            }
+        }
+    }
 }
 .navegador{
     background-color:rgba(103, 148, 54, 0.75);

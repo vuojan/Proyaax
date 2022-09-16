@@ -18,6 +18,19 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+  nav a img {
+    width: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 nav ul {
   list-style-type: none;
   padding: 15px 15px;
@@ -27,7 +40,17 @@ nav ul {
   text-align: center;
   width: 100%;
 }
-nav li a {
+@media (max-width: 576px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  nav ul li {
+    margin: 3px 0;
+  }
+}
+nav ul li a {
   text-decoration: none;
   color: rgb(2, 2, 2);
   font-family: "Roboto", sans-serif;
@@ -35,6 +58,12 @@ nav li a {
   font-weight: 400;
   margin-right: 15px;
   margin-left: 15px;
+}
+@media (max-width: 576px) {
+  nav ul li a {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
 }
 
 .navegador {
@@ -44,6 +73,14 @@ nav li a {
 header img {
   width: 100%;
   margin-bottom: 0px;
+}
+@media (max-width: 576px) {
+  header img {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 0;
+  }
 }
 
 .container {
@@ -258,7 +295,7 @@ header img {
   align-items: flex-start;
 }
 @media (max-width: 576px) {
-  .finalsection {
+  .finalsection--flex {
     align-items: center;
     flex-direction: column;
   }

@@ -1,5 +1,4 @@
 
-//Css del main
 
 //Css del header
 
@@ -37,6 +36,8 @@ header{
 #aside1{
     grid-area: aside1;
 }
+
+//Comienza mainSection
 
 .mainsection{
     text-align: center;
@@ -100,6 +101,7 @@ header{
 }
 
 //animacion en mainsection
+
 #animacion{
     width: 450px;
     height: 400px;
@@ -127,6 +129,7 @@ header{
     100%{background-size: cover;background-image: url(../imagenes/aside-compañeros/service-1.png);}
     
 }
+
 //css de finalsection
 
 .finalsection{
@@ -160,7 +163,7 @@ header{
             margin-top: 15px;
         }
     }
-    &__flex{
+    &--flex{
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -257,6 +260,7 @@ section.finalsection{
 }
 
 //ASIDE
+
 .aside{
     font-weight: $weightText;
     text-align: center;

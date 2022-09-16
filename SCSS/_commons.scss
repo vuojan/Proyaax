@@ -14,10 +14,20 @@ $textFont: 'Lato', sans-serif;
 $sizeTittle: 5rem;
 $sizeText: 2rem;
 $sizeMedium: 2.5rem;
+$sizeSmall: 1.7rem;
 
 //weights
 $weightTittle: 600;
 $weightText: 200;
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
 
 
 

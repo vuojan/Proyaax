@@ -1,0 +1,32 @@
+//navbar
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+        list-style-type: none;
+        padding: 15px 15px;
+        font-size: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    li{
+        a{
+            text-decoration: none;
+            color:rgb(2, 2, 2);
+            font-family:'Roboto', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-right: 15px;
+            margin-left: 15px;  
+        }
+    }     
+}
+.navegador{
+    background-color:rgba(103, 148, 54, 0.75);
+}

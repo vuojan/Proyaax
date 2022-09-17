@@ -119,21 +119,25 @@ header img{
     padding: 50px 0px;
     background-color: rgb(235, 242, 250, 0.7);
 }
+
 .secondarysection--flex{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 section.secondarysection article{
-    width: 20vw;
-    padding: 30px 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    width: 15vw;
+    padding: 30px 20px;
+    margin-right: 35px;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
    }
 
    section.secondarysection article img{
-    height: 100px;
+    width: 100px;
+    margin: 0 auto;
    }
 
 .secondarysection__tittle{
@@ -163,7 +167,7 @@ section.secondarysection article{
     font-family: 'Lato', sans-serif;
     margin-top: 10px;
     line-height: 2.8rem ;
-    /* height: 180px; */
+    flex-grow: 1;  
 }
 .secondarysection__text--txtdec{
     text-decoration: none;  
@@ -210,7 +214,7 @@ section.secondarysection article{
     background-color: rgba(5, 102, 141, 0.8); 
     border: 1px solid black;
     color: white;
-    padding: 7px 25px;
+    padding: 5px 0px;
     font-size: 1.7rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
@@ -220,6 +224,9 @@ section.secondarysection article{
     border-radius: 10px;
     z-index: 2;
     position: relative;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
     
 
 }
@@ -240,30 +247,26 @@ section.secondarysection article{
 }
 .thirdsection__tittle{
     color:rgba(103, 148, 54, 1);   
-    font-size: 7rem;
+    font-size: 5rem;
     font-family: 'Roboto', sans-serif;
     margin-top: 60px;
     font-weight: 600;
     margin-bottom: 60px;
-    /* width: 10vw; */
     
 }
 .thirdsection__tittle--img{
-    width: 12vw;
+    width: 6vw;
 }
 .thirdsection__subtittle{
     color:rgba(103, 148, 54, 1);
     font-size: 2.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;  
-    /* width: 12vw;
-    margin: 0 auto; */
 }
 .thirdsection__subtittle--img{
     width: 15vw;
     border-radius: 10px;
     margin-bottom: 20px;
-
 }
 
 .thirdsection__subtittle--text{
@@ -284,7 +287,6 @@ section.secondarysection article{
     
 }
 .thirdsection__article{
-
     padding: 30px 30px;
     margin-bottom: 30px;
     background-color: white;
@@ -297,13 +299,12 @@ section.secondarysection article{
 /* GRID de thirdsection*/
 .container{
     display: grid;
-    grid-template-columns: repeat(4,18%);
+    grid-template-columns: 20% 12% 12% 20%;
     grid-template-rows: auto;
     grid-template-areas:
     "proyectos areas areas urb"
     "emp areas areas org";
     justify-content: center;
-    align-items: start;
     justify-items: center;
     padding-top: 30px;
 }

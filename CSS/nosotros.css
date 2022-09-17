@@ -6,45 +6,41 @@ html{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 /* Css del body */
 body{
     background-color: white;
     
 } 
-/* Css del nav */
-nav{
+
+/* Css de nav bootstrap */
+
+#navegador{
+    background-color: white;
     position: sticky;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;      
-}  
-
-
-nav ul{
-    list-style-type: none;
-    padding: 15px 15px;
-    font-size: 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
-    
-    nav ul li a{
-        text-decoration: none;
-        color:rgb(2, 2, 2);
-        font-family:'Roboto', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 400;
-        margin-right: 15px;
-        margin-left: 15px;
-    }
 
-.navegador{
-    background-color:rgba(103, 148, 54, 0.75);
+#navegador div.container{
+    width: auto;
+}
+#navegador div.container a img{
+    margin-right: 30px;
+}
+
+#navegador div.navbar-nav a{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 20px;
+}
+#navegador div.navbar-nav a:hover{
+    color: rgba(103, 148, 54, 1);
 }
 
 /* Css del header */
@@ -57,7 +53,7 @@ header img{
 /* Css del main */
 
 /* GRID */
-.container{
+.containercss{
     display: grid;
     grid-template-columns: 40% 45% 15%;
     grid-template-rows: auto;
@@ -81,6 +77,7 @@ header img{
 
 .mainsection{
     text-align: center;
+    margin-top: 50px;
      
     
 }
@@ -88,7 +85,6 @@ header img{
     color: rgba(103, 148, 54, 1);
     font-size: 5rem;
     font-family: 'Roboto', sans-serif;
-    margin-top: 30px;
     margin-bottom: 30px;
     display: inline-block;
     font-weight: 600;
@@ -281,7 +277,8 @@ section.finalsection div p{
 
 .aside__list{
     list-style: none;
-    
+    margin: 0;
+    padding: 0;
         
 }
 

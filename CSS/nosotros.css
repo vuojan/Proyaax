@@ -6,60 +6,54 @@ html{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 /* Css del body */
 body{
     background-color: white;
     
 } 
-/* Css del nav */
-nav{
+
+/* Css de nav bootstrap */
+
+#navegador{
+    background-color: white;
     position: sticky;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;      
-}  
-
-
-nav ul{
-    list-style-type: none;
-    padding: 15px 15px;
-    font-size: 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
-    
-    nav ul li a{
-        text-decoration: none;
-        color:rgb(2, 2, 2);
-        font-family:'Roboto', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 400;
-        margin-right: 15px;
-        margin-left: 15px;
-    }
 
-.navegador{
-    background-color:rgba(103, 148, 54, 0.75);
+#navegador div.container{
+    width: auto;
+}
+#navegador div.container a img{
+    margin-right: 30px;
+}
+
+#navegador div.navbar-nav a{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 10px;
+}
+#navegador div.navbar-nav a:hover{
+    color: rgba(103, 148, 54, 1);
 }
 
 /* Css del header */
 header img{
-    width: 100%;
-    margin-bottom: 0px;
-    
+    width:100%;  
 }
 
 /* Css del main */
 
 /* GRID */
-.container{
+.containercss{
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 40% 45% 15%;
     grid-template-rows: auto;
     grid-template-areas: 
     "main main aside1"
@@ -81,6 +75,7 @@ header img{
 
 .mainsection{
     text-align: center;
+    margin-top: 50px;
      
     
 }
@@ -88,7 +83,6 @@ header img{
     color: rgba(103, 148, 54, 1);
     font-size: 5rem;
     font-family: 'Roboto', sans-serif;
-    margin-top: 30px;
     margin-bottom: 30px;
     display: inline-block;
     font-weight: 600;
@@ -181,21 +175,23 @@ header img{
 .finalsection--flex{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
 }
 .finalsection__figure--width{
-    width: 25vw;
+    width: 20vw;
     margin: 60px 60px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px 20px;
     border-radius: 10px;
-    background-color: rgb(235, 242, 250, 0.7);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 
 }
 
 section.finalsection div img{
     width: 20vw;
     border-radius: 10px;
+    margin: 0 auto;
 }
 section.finalsection div h3{
     font-size: 2.5rem;
@@ -211,7 +207,8 @@ section.finalsection div p{
     margin-top: 15px;
     color: rgb(2, 2, 2);
     line-height: 3rem;
-    font-weight: 200;    
+    font-weight: 200;
+    flex-grow: 1;    
 }
 
 .finalsection__figure--button {
@@ -226,6 +223,7 @@ section.finalsection div p{
     font-family: 'Roboto', sans-serif;
     border-radius: 10px;
     border: none;
+    line-height: normal;
   }
   
   .finalsection__figure--button span {
@@ -269,23 +267,21 @@ section.finalsection div p{
 
 .aside__tittle{
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 15px;
-    color:rgba(5, 102, 141, 0.9);
+    color:rgba(5, 102, 141, 1);
     font-weight: 600;
 }
 
 .aside__list{
     list-style: none;
-    
+    margin: 0;
+    padding: 0;
         
-}
-.aside__list--img{
-    border-radius: 50%;
 }
 
 aside.aside ul li{
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 3rem;
     margin: 20px;
     display: flex;
@@ -298,6 +294,7 @@ aside.aside ul li{
 
 aside.aside ul li img{
     margin-right: 20px;
+    width: 15px;
 }
 
 aside.aside ul li:nth-child(2) {
@@ -341,41 +338,68 @@ footer a img{
 
 /* Breakpoint mobile */
 
-@media (max-width: 576px){
-    nav{
-        position: sticky;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;      
-    }  
 
-    nav a img{
-        width: 200px;
-        object-fit: cover;
-    
+@media (max-width: 992px){
+    .containercss{
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        "main"
+        "aside1"
+        "final"
+        ;
     }
-    
-    nav ul{
-        display: flex;
+
+    .aside__tittle{
+        font-size: 2.5rem;
+    }
+
+    aside.aside ul li{
+        font-size: 2rem; 
+    }
+
+    aside.aside ul li img{
+        width: 20px;
+    }
+
+    .finalsection__figure--width{
+        width: 30vw;
+        margin: 30px 30px;
+    }
+
+
+    section.finalsection div img{
+        width: 30vw;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .mainsection--flex{
         flex-direction: column;
+        margin-bottom: 15px;
+    
     }
-    nav ul li{
-        margin: 3px 0;
+    .mainsection__text--width{
+        width: 80vw;
     }
-    nav ul li a{
-        font-size: 1.8rem;
-        font-weight: 600;
+    #animacion{
+        height: 300px;
+        width: 400px;
+        margin-right: 15px;
+        margin-left: 15px;
     }
+}
+
+@media (max-width: 576px){
+    
     header img{
         height: 200px;
         object-fit: cover;
         margin: 0 0;
     }
 
-    .container{
+    .containercss{
         grid-template-columns: 100vw;
         grid-template-areas: 
         "main"
@@ -405,13 +429,16 @@ footer a img{
         width: 80vw;
     }
     #animacion{
-        height: 350px;
-        width: 350px;
+        height: 300px;
+        width: 400px;
+        margin-right: 15px;
+        margin-left: 15px;
     }
    
     .finalsection__tittle{
         font-size: 3rem;
         padding-top: 15px;
+        margin-top: 30px;
           
     }
     .finalsection__text{
@@ -424,9 +451,11 @@ footer a img{
         flex-direction: column;
     }
     .finalsection__figure--width{
-        width: 80vw;
+        width: 70vw;
         margin-top: 15px;
         margin-bottom: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
         
     }
     section.finalsection div img{
@@ -442,5 +471,17 @@ footer a img{
         padding-left: 25px;
         padding-right: 25px;   
     } 
+
+    .aside__tittle{
+        font-size: 2rem;
+    }
+
+    aside.aside ul li{
+        font-size: 1.7rem; 
+    }
+
+    aside.aside ul li img{
+        width: 15px;
+    }
 
 }

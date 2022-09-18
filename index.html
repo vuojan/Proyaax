@@ -5,30 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProYaax Consultora Ambiental</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <nav class="navegador">
-        <a href="index.html">
-            <img src="imagenes/logoproyaax.png" alt="ProYaax consultora ambiental">
-        </a>
-        <ul>
-            <li>
-                <a href="index.html">INICIO</a>
-            </li>
-            <li>
-                <a href="nosotros.html">NOSOTROS</a>
-            </li>
-            <li>
-                <a href="servicios.html">SERVICIOS</a>
-            </li>
-            <li>
-                <a href="clientes.html">CLIENTES</a>
-            </li>
-            <li>
-                <a href="contacto.html">CONTACTO</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navegador">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/logoproyaax.png" alt="Proyaax consultora">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="index.html">Inicio</a>  
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+              <a class="nav-link" href="servicios.html">Servicios</a>
+              <a class="nav-link" href="clientes.html">Clientes</a>
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </div>
+          </div>
+        </div>
     </nav>
     <header>
         <img src="imagenes/header.con.leyenda.png" alt="Consultora ambiental">
@@ -53,7 +51,7 @@
             </div>
         </section>
         <section class="secondarysection">
-            <h2 class="secondarysection__tittle--main mainsection__tittle--subrayado">EJES <span class="secondarysection__tittle--color">PRINCIPALES</span></h2>
+            <h2 class="secondarysection__tittle--main mainsection__tittle--subrayado">EJES <span class="secondarysection__tittle--color">PRINCIPALES</span></h2>  
                 <div class="secondarysection--flex">
                     <article class="secondarysection__article--borde">
                         <img src="imagenes/flaticons/empresa.png" alt="">
@@ -61,8 +59,10 @@
                         <p class="secondarysection__text">
                         Somos una joven empresa fundada en el año 2022, con sede en Mendoza, Argentina. Nuestro equipo esta integrado 
                         por profesionales con una amplia formacion y experiencia en el campo de las ciencias ambientales.
-                         </p>
-                         <button class="secondarysection__article--boton"><a href="nosotros.html" class="secondarysection__article--txtdecoration">Ver mas</a></button>
+                        </p>
+                        
+                            <button class="secondarysection__article--boton"><a href="nosotros.html" class="secondarysection__article--txtdecoration">Ver mas</a></button>
+                        
                     </article> 
                     <article class="secondarysection__article--borde">
                         <img src="imagenes/flaticons/objetivo.png" alt="">
@@ -71,20 +71,22 @@
                         Tenemos como principal objetivo la consolidacion de modelos industriales sostenibles, 
                         cuyas buenas practicas ambientales se traduzcan en rentabilidad y nuevas oportunidades de mercado.
                         </p>
+                        
                         <button class="secondarysection__article--boton"><a href="nosotros.html" class="secondarysection__article--txtdecoration">Ver mas</a></button>
+                        
                     </article>
                     <article class="secondarysection__article--borde">
                         <img src="imagenes/flaticons/Servicio.png" alt="">
                         <h2 class="secondarysection__tittle">QUE OFRECEMOS</h2>
                         <p class="secondarysection__text">
                         Brindamos atencion altamente personalizada, destinada a adaptar los procesos de tu industria
-                        hacia un modelo de mayor sustentabilidad y eficiencia.
+                        hacia un modelo de mayor sustentabilidad y eficiencia. Garantizamos seriedad, integridad y compromiso.
                         </p>
                         <button class="secondarysection__article--boton"><a href="servicios.html" class="secondarysection__article--txtdecoration" >Ver mas</a></button>
                     </article>
                 </div>
         </section>
-        <section class="container thirdsection">
+        <section class="containercss thirdsection">
             <div id="areas">
                 <h2 class="thirdsection__tittle"><div>AREAS</div><div>DE</div><div><span class="mainsection__tittle--color">TRABAJO</span></div></h2>
                 <img class="thirdsection__tittle--img" src="Imagenes de grid/refresh (1).png" alt="">
@@ -167,5 +169,6 @@
             <img src="imagenes/Footer/logotipo-de-twitter.png" alt="Twitter">
         </a>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
 </body>
 </html>

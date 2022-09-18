@@ -1,11 +1,12 @@
 /* Fuentes - Probar otras en remplazo de Aboreto*/
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 html{
     font-size: 62.5%;
 }
 *{
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 /* Css del body - Imagen bg no definitiva */
 body{
@@ -16,36 +17,32 @@ body{
     
 }
 /* Css del nav */
-nav{
+
+#navegador{
+    background-color: white;
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;    
+    z-index: 10;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
-nav ul{
-    list-style-type: none;
-    padding: 15px 15px;
-    font-size: 0;
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
+#navegador div.container{
+    width: auto;
 }
-    nav ul li{
-        display: inline-block;
-    }
-        nav ul li a{
-             text-decoration: none;
-             color:rgb(2, 2, 2);
-            font-family:'Aboreto', sans-serif;
-             font-size: 2.5rem;
-             font-weight: 600;
-             margin-right: 15px;
-             margin-left: 15px;
-        }
+#navegador div.container a img{
+    margin-right: 30px;
+}
 
-.navegador{
-    background-color:rgba(103, 148, 54, 0.85);
+#navegador div.navbar-nav a{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 10px;
+}
+#navegador div.navbar-nav a:hover{
+    color: rgba(103, 148, 54, 1);
 }
 
 /* Css del header */

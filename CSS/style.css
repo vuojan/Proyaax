@@ -38,7 +38,7 @@ body{
     color: black;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 #navegador div.navbar-nav a:hover{
     color: rgba(103, 148, 54, 1);
@@ -229,10 +229,14 @@ section.secondarysection article{
 }
 .secondarysection__article--boton:hover{
     background-color: rgba(5, 102, 141, 1);
+    
 }
 .secondarysection__article--txtdecoration{
     text-decoration: none;
     color:inherit;
+}
+.secondarysection__article--boton a:hover{
+    color: white;
 }
 
 /* Css de thirdsection */
@@ -384,7 +388,7 @@ section.finalsection article p{
 }
 
 article iframe{
-    width: 450px;
+    width: 25vw;
     margin-bottom: 20px;
 }
 
@@ -408,34 +412,65 @@ footer a img{
 
 /* Breakpoint mobile */
 
-@media (max-width: 576px){
-    nav{
-        position: sticky;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;      
-    }  
 
-    nav a img{
-        width: 200px;
-        object-fit: cover;
+@media (max-width: 992px){
+
+    section.secondarysection article{
+        width: 25vw;
+       }
+
+    .containercss{
+        grid-template-columns: 40% 40%;
+        grid-template-areas:
+        "areas areas"
+        "proyectos urb"
+        "emp org";
+        align-items: center;
+        padding-top: 15px;
+        justify-items: center;
+        
+    }
+    .thirdsection__tittle{
+        margin-top: 50px;
+        
+    }
+
+    .thirdsection__tittle--img{
+        display: none;
+        
+    }
+    .thirdsection__article{
+        padding: 30px 30px;
+        margin-bottom: 30px;
+        width: 25vw;
     
     }
+    .thirdsection__subtittle--img{
+        width: 25vw;
+
+    }
     
-    nav ul{
-        display: flex;
+}
+
+@media (max-width: 768px){
+
+    .mainsection{
         flex-direction: column;
+        margin-bottom: 50px;
     }
-    nav ul li{
-        margin: 3px 0;
+
+    .mainsection__tittle{
+        margin-right: 0px;
     }
-    nav ul li a{
-        font-size: 1.8rem;
-        font-weight: 600;
-    }
+    .mainsection__text--widht{
+        width: 80vw;
+    }   
+
+
+}
+
+@media (max-width: 576px){
+  
     header img{
         height: 200px;
         object-fit: cover;
@@ -449,6 +484,7 @@ footer a img{
     .mainsection__tittle{
         font-size: 3rem;
         width: auto;
+        margin-right: 0;
     }
     .mainsection__text{
         margin: 0px 0px 20px 0px;
@@ -468,14 +504,16 @@ footer a img{
         flex-direction: column;
     }
     section.secondarysection article{
-        width: 80vw;
+        width: 70vw;
         padding: 15px 15px;
         height: auto;
         margin-bottom: 25px;
+        margin-left: 0;
+        margin-right: 0;
        }
     
        section.secondarysection article img{
-        height: 150px;
+        height: 100px;
        }
     
     .secondarysection__tittle{
@@ -492,7 +530,7 @@ footer a img{
         padding-left: 15px;
         padding-right: 15px;
     }
-    .container{
+    .containercss{
         grid-template-columns: 100vw;
         grid-template-areas:
         "areas"
@@ -517,7 +555,7 @@ footer a img{
     }
     .thirdsection__subtittle{
         font-size: 2.5rem;
-        margin-top: 20px;
+        margin-top: 10px;
         padding-right: 15px;
         padding-left: 15px;
         
@@ -533,11 +571,11 @@ footer a img{
         
     }
     .thirdsection__subtittle--img{
-        width: 80vw;
+        width: 300px;
     }
 
     .thirdsection__article{
-        width: 80vw;
+        width: 70vw;
     }
 
     section.finalsection article{

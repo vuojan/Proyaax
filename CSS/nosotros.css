@@ -37,7 +37,7 @@ body{
     color: black;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 #navegador div.navbar-nav a:hover{
     color: rgba(103, 148, 54, 1);
@@ -45,9 +45,7 @@ body{
 
 /* Css del header */
 header img{
-    width: 100%;
-    margin-bottom: 0px;
-    
+    width:100%;  
 }
 
 /* Css del main */
@@ -184,7 +182,6 @@ header img{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px 20px;
     border-radius: 10px;
-    /* background-color: rgb(235, 242, 250, 0.7); */
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -226,6 +223,7 @@ section.finalsection div p{
     font-family: 'Roboto', sans-serif;
     border-radius: 10px;
     border: none;
+    line-height: normal;
   }
   
   .finalsection__figure--button span {
@@ -296,7 +294,6 @@ aside.aside ul li{
 
 aside.aside ul li img{
     margin-right: 20px;
-    /* width: .9vw; */
     width: 15px;
 }
 
@@ -341,41 +338,68 @@ footer a img{
 
 /* Breakpoint mobile */
 
-@media (max-width: 576px){
-    nav{
-        position: sticky;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;      
-    }  
 
-    nav a img{
-        width: 200px;
-        object-fit: cover;
-    
+@media (max-width: 992px){
+    .containercss{
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        "main"
+        "aside1"
+        "final"
+        ;
     }
-    
-    nav ul{
-        display: flex;
+
+    .aside__tittle{
+        font-size: 2.5rem;
+    }
+
+    aside.aside ul li{
+        font-size: 2rem; 
+    }
+
+    aside.aside ul li img{
+        width: 20px;
+    }
+
+    .finalsection__figure--width{
+        width: 30vw;
+        margin: 30px 30px;
+    }
+
+
+    section.finalsection div img{
+        width: 30vw;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .mainsection--flex{
         flex-direction: column;
+        margin-bottom: 15px;
+    
     }
-    nav ul li{
-        margin: 3px 0;
+    .mainsection__text--width{
+        width: 80vw;
     }
-    nav ul li a{
-        font-size: 1.8rem;
-        font-weight: 600;
+    #animacion{
+        height: 300px;
+        width: 400px;
+        margin-right: 15px;
+        margin-left: 15px;
     }
+}
+
+@media (max-width: 576px){
+    
     header img{
         height: 200px;
         object-fit: cover;
         margin: 0 0;
     }
 
-    .container{
+    .containercss{
         grid-template-columns: 100vw;
         grid-template-areas: 
         "main"
@@ -405,13 +429,16 @@ footer a img{
         width: 80vw;
     }
     #animacion{
-        height: 350px;
-        width: 350px;
+        height: 300px;
+        width: 400px;
+        margin-right: 15px;
+        margin-left: 15px;
     }
    
     .finalsection__tittle{
         font-size: 3rem;
         padding-top: 15px;
+        margin-top: 30px;
           
     }
     .finalsection__text{
@@ -424,9 +451,11 @@ footer a img{
         flex-direction: column;
     }
     .finalsection__figure--width{
-        width: 80vw;
+        width: 70vw;
         margin-top: 15px;
         margin-bottom: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
         
     }
     section.finalsection div img{
@@ -442,5 +471,17 @@ footer a img{
         padding-left: 25px;
         padding-right: 25px;   
     } 
+
+    .aside__tittle{
+        font-size: 2rem;
+    }
+
+    aside.aside ul li{
+        font-size: 1.7rem; 
+    }
+
+    aside.aside ul li img{
+        width: 15px;
+    }
 
 }

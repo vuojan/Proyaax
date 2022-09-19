@@ -144,7 +144,7 @@ header img{
     padding: 0;
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
 
 }
@@ -152,12 +152,14 @@ header img{
 #accordionExample div.accordion-body p{
     font-family: 'Lato', sans-serif;
     font-weight: 200;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
     padding: 20px;
+    align-self: center;
 }
 #accordionExample div.accordion-body img{
-    width: 20vw;
+    object-fit: fill;
+    width: 275px;
 }
 .thirdsection{
     background-color: white;
@@ -188,7 +190,7 @@ header img{
 
 
 
-    /* Css de footer */
+    /*Css de footer */
 footer{
     text-align: center;
     background-color: rgba(5, 102, 141, 0.6);

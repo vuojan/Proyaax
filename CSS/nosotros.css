@@ -109,7 +109,8 @@ header img{
     font-family: 'Lato', sans-serif;
     margin: 30px;
     font-weight: 200;
-    }
+    text-align: justify;
+}
 .mainsection--flex{
     display: flex;
     justify-content: center;

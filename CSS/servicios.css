@@ -10,10 +10,8 @@ html{
 }
 /* Css del body - Imagen bg no definitiva */
 body{
-    background-image: url(../imagenes/background-2076336_1280.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    
+    background-color: white;
     
 }
 /* Css del nav */
@@ -50,114 +48,159 @@ header img{
     width: 100%;
     height: auto;
 }
+
+/* Css mainsection */
 .mainsection{
     text-align: center;
     font-weight: 600;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
     
 }
 .mainsection__tittle{
-    color: rgb(235, 242, 250); 
-    background-color: rgba(5, 102, 141, 0.9);
-    font-size: 3rem;
-    font-family: 'Aboreto', sans-serif;
-    padding: 20px 20px;
-    border-style: solid;
-    border-color: black;
+    color: rgba(103, 148, 54, 1);
+    font-size: 7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-right: 90px;
+    margin-bottom: 30px;
+
 }
+.mainsection__tittle--color{
+
+    color: rgba(103, 148, 54, 0.8);
+}
+
 .mainsection__text{
     color: rgb(2, 2, 2);
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Lato', sans-serif;
-    margin: 30px auto;
-    width: 60%;
-    font-style: italic;
-    }
+    line-height: 3rem;
+    font-weight: 200;
+    width: 30vw;
+    margin-bottom: 30px;
+    text-align: justify;
+}
     
+/* Css secondarysection */
+
 .secondarysection{
     text-align: center;
     font-weight: 600;
+    background-color: rgb(235, 242, 250, 0.7);
 }
 
-.secondarysection__tittle{
-    color: rgb(235, 242, 250);
-    background-color: rgba(5, 102, 141, 0.7);
+/* css del acordeon */
+#accordionExample{
+    width: 50vw;
+    margin: 0px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+#accordionExample div.accordion-item{
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.borde{
+    border-bottom: none;
+}
+
+.borderText{
+    border: 1px solid rgba(0,0,0,.125);
+    border-bottom: none;
+}
+
+#accordionExample button{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(235, 242, 250, 0.7);
     font-size: 2.5rem;
-    font-family: 'Aboreto', sans-serif;
-    border-style: solid;
-    border-color: black;
-    padding: 20px 20px;
-    margin-bottom: 30px;   
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: rgba(5, 102, 141, 1);
+    font-weight: 200;
+    box-sizing: border-box;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+    font-weight: 600;
 }
-.secondarysection__tittle--greenBg{
-    background-color: rgba(103, 148, 54, 0.5);
-    font-size: 3rem;
-    color:rgb(2, 2, 2);
+
+#accordionExample button:hover{
+    box-shadow: none;
 }
-.secondarysection__text{
-    color: rgb(2, 2, 2); 
-    font-size: 2rem;
+
+#accordionExample button span{
+    color: rgba(5, 102, 141, 0.8);
+}
+
+#accordionExample div.accordion-body{
+    padding: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#accordionExample div.accordion-body p{
     font-family: 'Lato', sans-serif;
-    margin-top: 30px;
-    line-height: 2.8rem ;
-    margin-bottom: 30px;
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 20px;
 }
-.secondarysection__text--big{
-    color: rgb(2, 2, 2); 
-    font-size: 2.5rem;
-    font-family: 'Aboreto', sans-serif;
-    margin-top:30px;
-    line-height: 2.8rem ;
-    margin-bottom: 30px
+#accordionExample div.accordion-body img{
+    width: 20vw;
 }
-.secondarysection__text--bottomMargin{
-    color: rgb(2, 2, 2); 
+.thirdsection{
+    background-color: white;
+    margin-top: 90px;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.thirdsection--flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdsection__img{
+    width: 20vw;
+    margin-right: 70px;
+    
+}
+.thirdsection__text{
     font-size: 2rem;
+    font-weight: 200;
     font-family: 'Lato', sans-serif;
-    margin-top: 30px;
-    line-height: 2.8rem ;
-    margin-bottom: 60px;
+    width: 20vw;
+    line-height: 3rem;
+    font-style: italic;
 }
-
-
-section.secondarysection div article img{
-    border-radius: 50%;
-    height: 250px;
-}
-
-section.secondarysection div article{
-    display: inline-block;
-    margin: 30px 35px;
-    width: 40%;
-    vertical-align: top;
-    height: auto
-}
-.secondarysection__article--width{
-    width: 45%;
-    margin: 0px auto; 
-}
-.secondarysection__image--radius{
-    border-radius: 50%;
-    height: 250px;
-}
-
 
 
 
     /* Css de footer */
 footer{
     text-align: center;
-    background-color: rgba(5, 102, 141, 0.9);
+    background-color: rgba(5, 102, 141, 0.6);
     padding: 5px 5px;
-    
 }
 footer h3{
-    color: rgb(235, 242, 250);
+    color:rgb(235, 242, 250);
     font-weight: 600;
     font-size: 1.8rem;
-    font-family: 'Aboreto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 15px;
 }
 footer a img{
     margin: 15px 15px;
-    width: 60px;
 }

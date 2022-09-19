@@ -71,7 +71,6 @@ header img{
     margin: 20px 0px;
     margin-right: 90px;
     display: inline-block;
-    
     font-weight: 600;
     animation: fadein 2s ease-in; 
 }
@@ -101,7 +100,8 @@ header img{
     font-family: 'Lato', sans-serif;
     margin: 30px 0;
     line-height: 3rem;
-    }
+    text-align: justify;
+}
 .mainsection__text--widht{
     width: 30vw;
 }    

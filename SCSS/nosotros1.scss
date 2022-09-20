@@ -1,0 +1,454 @@
+@import "_commons";
+@import "_navbar";
+@import "_footer";
+
+
+//Css del main
+
+//GRID
+.containercss{
+    display: grid;
+    grid-template-columns: 40% 45% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main main aside1"
+    "final final final"
+    ;
+}
+#main{
+    grid-area: main;
+}
+#final{
+    grid-area: final;
+}
+#aside1{
+    grid-area: aside1;
+}
+
+/* Css de mainsection */
+
+.mainsection{
+    text-align: center;
+    margin-top: 50px;
+    &__tittle{
+        color: rgba(103, 148, 54, 1);
+        font-size: 5rem;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 30px;
+        display: inline-block;
+        font-weight: 600;
+        &--color{
+            color: rgba(103, 148, 54, 0.8);
+        }
+        &--subrayado{
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 4px;
+            transition: background-size .8s;
+            &:hover,&:focus{
+                background-size: 100% 4px;
+            }
+        }
+    }
+    &__text{
+        color: rgb(2, 2, 2);
+        font-size: 2rem;
+        line-height: 3rem;
+        font-family: 'Lato', sans-serif;
+        margin: 30px;
+        font-weight: 200;
+        text-align: justify;
+        &--width{
+            width: 40%;
+        }
+    }
+    &--flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px; 
+    }     
+}
+
+//Empieza animacion de mainsection
+
+#animacion{
+    width: 450px;
+    height: 350px;
+    margin: 30px;
+    margin-left: 50px;
+    background-position: 0 0;
+    animation-name: animacionmain;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+@keyframes animacionmain{
+    0%{background-size: cover;background-image: url(../imagenes/aside-compañeros/animacion1.jpg);}
+    20%{background-size: cover;background-image: url(../imagenes/aside-compañeros/animacion13.jpg);}
+    40%{background-size: cover;background-image: url(../imagenes/aside-compañeros/animacion3.jpg);}
+    60%{background-size: cover;background-image: url(../imagenes/aside-compañeros/animacion4.png);}
+    80%{background-size: cover;background-image: url(../imagenes/aside-compañeros/animacion5.jpg);}
+    100%{background-size: cover;background-image: url(../imagenes/aside-compañeros/service-1.png);}
+    
+}
+
+//Termina animacion mainsection
+
+//Css finalsection
+
+.finalsection{
+    text-align: center;
+    background-color: rgb(235, 242, 250, 0.7);
+    &__tittle{
+        color:rgba(5, 102, 141, 1);
+        font-size: 5rem;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 50px;
+        display: inline-block;
+        font-weight: 600;
+        &--color{
+            color: rgba(5, 102, 141, 0.8);
+        }
+    }
+    &__text{
+        color: rgb(2, 2, 2);
+        font-family: 'Lato', sans-serif;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        margin-top: 50px;
+        font-weight: 200;
+    }
+    &--flex{
+        display: flex;
+        justify-content: center;
+    }
+    &__figure{
+        &--width{
+            width: 20vw;
+            margin: 60px 60px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 20px 20px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        &--button{
+            background-color: rgba(5, 102, 141, 0.75);
+            color:white;
+            font-size: 2rem;
+            padding: 7px 25px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 20px;
+            font-weight: 200;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 10px;
+            border: none;
+            line-height: normal;
+            span{
+                cursor: pointer;
+                position: relative;
+                transition: 0.5s;
+                &::after{
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+            }
+            &:hover{
+                span{
+                    padding-right: 25px;
+                    &::after{
+                        opacity: 1;
+                        right: 0;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+section.finalsection{
+    div{
+        img{
+            width: 20vw;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        h3{
+            font-size: 2.5rem;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 15px;
+            color: rgba(5, 102, 141, 1);
+            font-weight: 200;
+        }
+        p{
+            font-family: 'Lato', sans-serif;
+            font-size: 1.7rem;
+            margin-top: 15px;
+            color: rgb(2, 2, 2);
+            line-height: 3rem;
+            font-weight: 200;
+            flex-grow: 1; 
+        }
+    }
+}
+
+//termina finalsection
+
+//Css de aside
+
+.aside{
+    font-weight: 200;
+    text-align: center;
+    background-color: rgba(103, 148, 54, .25);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    border: solid;
+    border-width: 1px 0px 1px 1px;
+    &__tittle{
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color:rgba(5, 102, 141, 1);
+        font-weight: 600;
+    }
+    &__list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+aside.aside{
+    ul{
+        li{
+            font-size: 1.7rem;
+            line-height: 3rem;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+            text-align: left;
+            animation: fadein 2s forwards;
+            opacity: 0; 
+            img{
+                margin-right: 20px;
+                width: 15px;
+            }
+            &:nth-child(2){
+                animation-delay: 0.5s;
+            }
+            &:nth-child(3){
+                animation-delay: 1s;
+            }
+            &:nth-child(4){
+                animation-delay: 1.5s;
+            }   
+            &:nth-child(5){
+                animation-delay: 2s;
+            }
+            &:nth-child(6){
+                animation-delay: 2.5s;
+            }  
+        }
+    }
+}
+
+//Animacion aside
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }  
+}
+
+@media (max-width: 992px){
+    .containercss{
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        "main"
+        "aside1"
+        "final"
+        ;
+    }
+
+    .aside{
+        &__tittle{
+            font-size: 2.5rem;
+        }
+    }
+
+    aside.aside{
+        ul{ 
+            li{
+                font-size: 2rem;
+                img{
+                    width: 20px;
+                }
+            } 
+        }
+    }
+
+    .finalsection{
+        &__figure{
+            &--width{
+                width: 30vw;
+                margin: 30px 30px;
+            }
+        }
+    }
+
+    section.finalsection{
+        div{
+            img{
+                width: 30vw;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .mainsection{
+        &--flex{
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        &__text{
+            &--width{
+                width: 80vw;
+            }
+        }
+    }   
+
+    #animacion{
+        height: 300px;
+        width: 400px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 576px){
+
+    header{
+        img{
+            height: 200px;
+            object-fit: cover;
+            margin: 0 0;
+        }
+    }
+    
+    .containercss{
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        "main"
+        "aside1"
+        "final"
+        ;
+    }
+
+    .mainsection{
+        &__tittle{
+            font-size: 3rem;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+        }
+        &__text{
+            font-size: 1.7rem;
+            margin: 0px;
+            padding-right: 25px;
+            padding-left: 25px;
+            &--width{
+                width: 80vw;
+            }
+        }
+        &--flex{
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+    }
+
+    #animacion{
+        height: 300px;
+        width: 400px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .finalsection{
+        &__tittle{
+            font-size: 3rem;
+            padding-top: 15px;
+            margin-top: 30px; 
+        }
+        &__text{
+            font-size: 1.7rem;
+            line-height: 3.5rem;
+            margin-top: 15px;
+        }
+        &--flex{
+            align-items: center;
+            flex-direction: column;
+        }
+        &__figure{
+            &--width{
+                width: 70vw;
+                margin-top: 15px;
+                margin-bottom: 50px;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    section.finalsection{
+        div{
+            img{
+                width: 60vw;
+            }
+        }
+        h3{
+            font-size: 2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        p{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+   
+
+    .aside{
+        &__tittle{
+            font-size: 2rem;
+        }
+    }
+    aside.aside{
+        ul{
+            li{
+                font-size: 1.7rem;
+                img{
+                    width: 15px;
+                }
+            }
+        }
+    }
+
+}

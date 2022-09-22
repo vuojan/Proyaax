@@ -32,7 +32,7 @@ header img {
 }
 #navegador div.navbar-nav a {
   font-size: 2.5rem;
-  color: black;
+  color: rgb(2, 2, 2);
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   margin: 0 10px;
@@ -43,18 +43,28 @@ header img {
 
 footer {
   text-align: center;
-  background-color: rgba(5, 102, 141, 0.6);
+  background-color: rgb(2, 2, 2);
   padding: 5px 5px;
 }
 footer h3 {
-  color: rgb(235, 242, 250);
+  color: white;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
   margin-top: 15px;
 }
+footer a {
+  text-decoration: none;
+}
 footer a img {
   margin: 15px 15px;
+}
+footer p {
+  color: white;
+  font-weight: 200;
+  font-size: 1.7rem;
+  font-family: "Lato", sans-serif;
+  margin-top: 10px;
 }
 
 .containercss {
@@ -81,7 +91,7 @@ footer a img {
   text-align: center;
   margin-top: 50px;
 }
-.mainsection__tittle {
+.mainsection__tittle, .finalsection__tittle {
   color: rgb(103, 148, 54);
   font-size: 5rem;
   font-family: "Roboto", sans-serif;
@@ -116,6 +126,7 @@ footer a img {
 }
 .mainsection--flex {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
@@ -198,11 +209,8 @@ footer a img {
 }
 .finalsection__tittle {
   color: rgb(5, 102, 141);
-  font-size: 5rem;
-  font-family: "Roboto", sans-serif;
   padding-top: 50px;
-  display: inline-block;
-  font-weight: 600;
+  margin-bottom: 0;
 }
 .finalsection__tittle--color {
   color: rgba(5, 102, 141, 0.8);
@@ -217,7 +225,9 @@ footer a img {
 }
 .finalsection--flex {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: normal;
 }
 .finalsection__figure--width {
   width: 20vw;
@@ -228,6 +238,8 @@ footer a img {
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
 }
 .finalsection__figure--button {
   background-color: rgba(5, 102, 141, 0.75);
@@ -291,12 +303,10 @@ section.finalsection div p {
   text-align: center;
   background-color: rgba(103, 148, 54, 0.25);
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 30px;
-  border: solid;
-  border-width: 1px 0px 1px 1px;
 }
 .aside__tittle {
   font-family: "Roboto", sans-serif;
@@ -316,6 +326,8 @@ aside.aside ul li {
   line-height: 3rem;
   margin: 20px;
   display: flex;
+  flex-direction: row;
+  justify-content: normal;
   align-items: center;
   font-family: "Lato", sans-serif;
   text-align: left;
@@ -413,7 +425,7 @@ aside.aside ul li:nth-child(6) {
     grid-template-columns: 100vw;
     grid-template-areas: "main" "aside1" "final";
   }
-  .mainsection__tittle {
+  .mainsection__tittle, .finalsection__tittle {
     font-size: 3rem;
     padding: 10px 10px;
     margin-bottom: 10px;

@@ -31,14 +31,14 @@
     text-align: center;
     margin-top: 50px;
     &__tittle{
-        color: rgba(103, 148, 54, 1);
-        font-size: 5rem;
-        font-family: 'Roboto', sans-serif;
+        color: map-get($map:$colores, $key:'main');
+        font-size: $sizeTittle;
+        font-family: $tittleFont;
         margin-bottom: 30px;
         display: inline-block;
-        font-weight: 600;
+        font-weight: $weightTittle;
         &--color{
-            color: rgba(103, 148, 54, 0.8);
+            color: map-get($map:$colores, $key:'mainSub');
         }
         &--subrayado{
             background-image: linear-gradient(currentColor, currentColor);
@@ -52,21 +52,19 @@
         }
     }
     &__text{
-        color: rgb(2, 2, 2);
-        font-size: 2rem;
+        color: map-get($map:$colores, $key:'black');
+        font-size: $sizeText;
         line-height: 3rem;
-        font-family: 'Lato', sans-serif;
+        font-family: $textFont;
         margin: 30px;
-        font-weight: 200;
+        font-weight: $weightText;
         text-align: justify;
         &--width{
             width: 40%;
         }
     }
     &--flex{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(row,center,center);
         margin-bottom: 50px; 
     }     
 }
@@ -107,27 +105,24 @@
     text-align: center;
     background-color: rgb(235, 242, 250, 0.7);
     &__tittle{
-        color:rgba(5, 102, 141, 1);
-        font-size: 5rem;
-        font-family: 'Roboto', sans-serif;
+        @extend .mainsection__tittle;
+        color:map-get($map:$colores, $key:'secondary');
         padding-top: 50px;
-        display: inline-block;
-        font-weight: 600;
+        margin-bottom: 0;
         &--color{
-            color: rgba(5, 102, 141, 0.8);
+            color:map-get($map:$colores, $key:'secondarySub');
         }
     }
     &__text{
         color: rgb(2, 2, 2);
-        font-family: 'Lato', sans-serif;
-        font-size: 2.5rem;
+        font-family: $textFont;
+        font-size: $sizeMedium;
         line-height: 3.5rem;
         margin-top: 50px;
-        font-weight: 200;
+        font-weight: $weightText;
     }
     &--flex{
-        display: flex;
-        justify-content: center;
+        @include flex(row,center,normal);
     }
     &__figure{
         &--width{
@@ -136,20 +131,19 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             padding: 20px 20px;
             border-radius: 10px;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
+            background-color: map-get($map:$colores , $key:'backGround3' );
+            @include flex(column,normal,normal);
         }
         &--button{
-            background-color: rgba(5, 102, 141, 0.75);
+            background-color: map-get($map:$colores , $key:'secondaryButton' );
             color:white;
-            font-size: 2rem;
+            font-size: $sizeText;
             padding: 7px 25px;
             transition: all 0.5s;
             cursor: pointer;
             margin: 20px;
-            font-weight: 200;
-            font-family: 'Roboto', sans-serif;
+            font-weight: $weightText;
+            font-family: $tittleFont;
             border-radius: 10px;
             border: none;
             line-height: normal;
@@ -187,19 +181,19 @@ section.finalsection{
             margin: 0 auto;
         }
         h3{
-            font-size: 2.5rem;
-            font-family: 'Roboto', sans-serif;
+            font-size: $sizeMedium;
+            font-family: $tittleFont;
             margin-top: 15px;
-            color: rgba(5, 102, 141, 1);
-            font-weight: 200;
+            color: map-get($map:$colores , $key:'secondary' );
+            font-weight: $weightText;
         }
         p{
-            font-family: 'Lato', sans-serif;
-            font-size: 1.7rem;
+            font-family: $textFont;
+            font-size: $sizeSmall;
             margin-top: 15px;
-            color: rgb(2, 2, 2);
+            color: map-get($map:$colores , $key:'black');
             line-height: 3rem;
-            font-weight: 200;
+            font-weight: $weightText;
             flex-grow: 1; 
         }
     }
@@ -212,20 +206,15 @@ section.finalsection{
 .aside{
     font-weight: 200;
     text-align: center;
-    background-color: rgba(103, 148, 54, .25);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    background-color: map-get($map:$colores , $key:'backGround1');
+    @include flex(column,flex-start,center);
     padding: 30px;
-    border: solid;
-    border-width: 1px 0px 1px 1px;
     &__tittle{
-        font-family: 'Roboto', sans-serif;
-        font-size: 2rem;
+        font-family: $tittleFont;
+        font-size: $sizeText;
         margin-bottom: 15px;
-        color:rgba(5, 102, 141, 1);
-        font-weight: 600;
+        color:map-get($map:$colores , $key:'secondary');
+        font-weight: $weightTittle;
     }
     &__list{
         list-style: none;
@@ -238,12 +227,11 @@ section.finalsection{
 aside.aside{
     ul{
         li{
-            font-size: 1.7rem;
+            font-size: $sizeSmall;
             line-height: 3rem;
             margin: 20px;
-            display: flex;
-            align-items: center;
-            font-family: 'Lato', sans-serif;
+            @include flex(row,normal,center);
+            font-family: $textFont;
             text-align: left;
             animation: fadein 2s forwards;
             opacity: 0; 
@@ -288,14 +276,14 @@ aside.aside{
 
     .aside{
         &__tittle{
-            font-size: 2.5rem;
+            font-size: $sizeMedium;
         }
     }
 
     aside.aside{
         ul{ 
             li{
-                font-size: 2rem;
+                font-size: $sizeText;
                 img{
                     width: 20px;
                 }
@@ -365,7 +353,7 @@ aside.aside{
 
     .mainsection{
         &__tittle{
-            font-size: 3rem;
+            font-size: $sizeLarge;
             padding: 10px 10px;
             margin-bottom: 10px;
         }
@@ -393,12 +381,12 @@ aside.aside{
 
     .finalsection{
         &__tittle{
-            font-size: 3rem;
+            font-size: $sizeLarge;
             padding-top: 15px;
             margin-top: 30px; 
         }
         &__text{
-            font-size: 1.7rem;
+            font-size: $sizeSmall;
             line-height: 3.5rem;
             margin-top: 15px;
         }
@@ -424,7 +412,7 @@ aside.aside{
             }
         }
         h3{
-            font-size: 2rem;
+            font-size: $sizeText;
             padding-left: 25px;
             padding-right: 25px;
         }
@@ -437,13 +425,13 @@ aside.aside{
 
     .aside{
         &__tittle{
-            font-size: 2rem;
+            font-size: $sizeText;
         }
     }
     aside.aside{
         ul{
             li{
-                font-size: 1.7rem;
+                font-size: $sizeSmall;
                 img{
                     width: 15px;
                 }

@@ -1,18 +1,26 @@
 //footer
 footer{
     text-align: center;
-    background-color: rgba(5, 102, 141, 0.6);
+    background-color: map-get($map:$colores , $key:'black');
     padding: 5px 5px;
     h3{
-        color:rgb(235, 242, 250);
-        font-weight: 600;
+        color:white;
+        font-weight: $weightTittle;
         font-size: 1.8rem;
-        font-family: 'Roboto', sans-serif;
+        font-family: $tittleFont;
         margin-top: 15px;
-    }
+    } 
     a{
+        text-decoration: none; 
         img{
             margin: 15px 15px;
         }
+    }
+    p{
+        color: white;
+        font-weight: $weightText;
+        font-size: 1.7rem;
+        font-family: $textFont;
+        margin-top: 10px;
     }
 }

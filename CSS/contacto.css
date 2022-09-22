@@ -1,11 +1,12 @@
 /* Fuentes - Probar otras en remplazo de Aboreto*/
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 html{
     font-size: 62.5%;
 }
 *{
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 /* Css del body - Imagen bg no definitiva */
 body{
@@ -49,138 +50,184 @@ header img{
     width: 100%;
     height: auto;
 }
+
+/* Css de mainsection */
+
 .mainsection{
     text-align: center;
-    font-weight: 600;
-    
+    background-color: white;
+    padding: 70px 0;
 }
+
 .mainsection__tittle{
-    color: rgb(235, 242, 250); 
-    background-color: rgba(5, 102, 141, 0.9);
-    font-size: 3rem;
-    font-family: 'Aboreto', sans-serif;
-    padding: 20px 20px;
-    border-style: solid;
-    border-color: black;
+    color: rgba(103, 148, 54, 1);
+    font-size: 5rem;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.mainsection__tittle--color{
+    color: rgba(103, 148, 54, 0.8);
 }
 .mainsection__text{
-    color: rgb(2, 2, 2);
+    font-family: 'Lato', sans-serif;
     font-size: 3rem;
-    font-family: 'Lato', sans-serif;
-    margin: 30px auto;
-    width: 60%;
-    font-style: italic;
+    font-weight: 200;
+    margin-bottom: 50px;
+    color: black;
+
 }
-.secondarysection{
-    text-align: center;
-    font-weight: 600;
+.mainsection--flex{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.secondarysection__tittle{
-    color: rgb(2, 2, 2);
-    background-color: rgba(103, 148, 54, 0.5);
-    font-size: 2.5rem;
-    font-family: 'Aboreto', sans-serif;
-    border-style: solid;
-    border-color: black;
-    padding: 20px 20px;
-    margin-bottom: 30px;   
+
+/* Css del form */
+.mainsection__form--flex{
+    display: flex;
+    flex-direction: column;
 }
-.secondarysection__text{
-    color: rgb(2, 2, 2); 
-    font-size: 2.5rem;
-    font-family: 'Lato', sans-serif;
-    margin-top: 30px;
-    line-height: 2.8rem ;
-    margin-bottom: 20px;
-    
-}
-.finalsection{
-    text-align: center;
-    font-weight: 600;
-}
-section.finalsection article h3{
-    color: rgb(4, 71, 28);
-    font-weight: 600;
-    font-size: 2rem;
-    font-family: 'Aboreto', sans-serif;
-    font-style: italic;
-    text-decoration: underline;
-    margin-bottom: 15px;
-    margin-top: 30px;
+.mainsection__form{
+    padding: 30px 30px 0 30px;
+    background-color: white;
+    margin-right: 60px;
+    width: 25vw;
+    border-radius: 10px;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgba(103, 148, 54, 1);
+    border-width: thick;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-section.finalsection article ul{
-    list-style-type: none;
+div.mainsection__form div input,textarea{
+    font-weight: 200;
     color: rgb(2, 2, 2);
-    font-weight: 600;
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
-   
-
+    margin-bottom: 30px;
+    width: 20vw;
+    padding: 10px;
+    flex-grow: 1;
 }
-section.finalsection article p{
-    color: rgb(2, 2, 2);
-    font-weight: 600;
-    font-size: 2rem;
-    font-family: 'Lato', sans-serif;
-}
-
-article iframe{
-    width: 450px;
-    margin-bottom: 15px;
-    margin-top: 30px;
-
-}
-
-    
-section.finalsection article form div{
-    margin: 30px 30px;
-
-}
-
-section.finalsection article form div input{
-    width: 100%;
-    height: auto;
-    font-size: 2.5rem;
-    font-family: 'Lato', sans-serif;
-}
-section.finalsection article form div textarea{
-    width: 100%;
-    height: auto;
-    font-size: 2.5rem;
-    font-family: 'Lato', sans-serif;
-}
-
-.inlineBlock{
-    display: inline-block;
-    width: 40%;
-    vertical-align: top;
+.flexgrow{
+    flex-grow: 1;
 }
 
 .formButon{
-    margin:0 15px;
     font-size: 2.5rem;
     font-family: 'Lato', sans-serif;
     padding: 15px 15px;
+    margin: 0 15px;
 }
 
-    /* Css de footer */
-footer{
-    text-align: center;
-    background-color: rgba(5, 102, 141, 0.9);
-    padding: 5px 5px;
-    margin-top: 20px;
+.form__button--flex{
+    display: flex;
+}
+
+
+
+/* Css de datos de contacto */
+
+
+.finalsection__article--flex{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.finalsection_article--box{
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 20vw;
+    padding-left: 20px;
+    padding-top: 30px;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgba(103, 148, 54, 1);
+    border-width: thick;
+    padding-right: 20px;
     
 }
+
+.finalsection__subtittle{
+    color:black;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
+}
+
+.finalsection__img{
+    width: 35px;
+    margin-right: 20px;
+}
+
+.finalsection__text{
+    font-weight: 200;
+    color: rgb(2, 2, 2);
+    font-size: 1.7rem;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.finalsection__text--list{
+    list-style-type: none;
+    line-height: 3rem;
+    margin-bottom: 30px;
+    font-weight: 200;
+    font-size: 1.7rem;
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    text-align: left;
+}
+
+div iframe{
+    width: 20vw;
+    margin-bottom: 30px;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+/* Termina final section */
+
+
+
+/* Css de footer */
+
+footer{
+    text-align: center;
+    background-color: black;
+    padding: 5px 5px;
+    }
 footer h3{
-    color: rgb(235, 242, 250);
+    color:rgb(235, 242, 250);
     font-weight: 600;
     font-size: 1.8rem;
-    font-family: 'Aboreto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 15px;
+} 
+    
+footer a{
+    text-decoration: none;
 }
+    
 footer a img{
     margin: 15px 15px;
-    width: 60px;
+}
+    
+footer p{
+    color: white;
+    font-weight: 200;
+    font-size: 1.7rem;
+    font-family:'Lato', sans-serif;
+     margin-top: 10px;
 }

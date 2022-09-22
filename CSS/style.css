@@ -113,7 +113,7 @@ header img{
 
 .secondarysection{
     text-align: center;
-    padding: 50px 0px;
+    padding: 70px 0 40px 0;
     background-color: rgb(235, 242, 250, 0.7);
 }
 
@@ -245,6 +245,7 @@ section.secondarysection article{
     text-align: center;
     font-weight: 400;
     background-color: white;
+    padding: 70px 0 40px 0;
 }
 .thirdsection__tittle{
     color:rgba(103, 148, 54, 1);   
@@ -259,10 +260,10 @@ section.secondarysection article{
     width: 6vw;
 }
 .thirdsection__subtittle{
-    color:rgba(103, 148, 54, 1);
+    color:black;
     font-size: 2.5rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;  
+    font-weight: 600; 
 }
 .thirdsection__subtittle--img{
     width: 15vw;
@@ -307,7 +308,6 @@ section.secondarysection article{
     "emp areas areas org";
     justify-content: center;
     justify-items: center;
-    padding-top: 30px;
 }
 #areas{
     grid-area: areas;
@@ -336,10 +336,7 @@ section.secondarysection article{
 .finalsection{
     text-align: center;
     background-color: rgb(235, 242, 250, 0.7);
-}
-
-section.finalsection article{
-    padding: 15px 15px;
+    padding: 70px 0 50px 0;
 }
 
 .finalsection__tittle{
@@ -347,56 +344,122 @@ section.finalsection article{
     font-size: 5rem;
     font-family: 'Roboto', sans-serif;
     display: inline-block;
-    padding: 60px 0 0 0;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-weight: 600;
 }
 
 .finalsection--flex{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
 }
 
-.finalsection--width{
-    width: 30%;
-    margin: 30px;
+.finalsection__img{
+    width: 400px;
+    margin-right: 70px;
 }
 
-section.finalsection article h3{
-    color:rgba(5, 102, 141, 1);
+section.finalsection ul{
+    width: 25vw;
+    margin-bottom: 0;
+}
+
+section.finalsection ul li{
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+section.finalsection ul li h3{
+    color:black;
     font-weight: 200;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;
-    margin-top: 15px;
-    
-}
-section.finalsection article ul{
-    list-style-type: none;
-    color: rgb(2, 2, 2);
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 3rem;
-    font-family: 'Lato', sans-serif;
-}
-section.finalsection article p{
-    font-weight: 400;
-    color: rgb(2, 2, 2);
-    font-size: 2rem;
-    font-family: 'Lato', sans-serif;
+    margin-top: 0px;
+    color: rgba(5, 102, 141, 1);
+    text-align: left;   
 }
 
-article iframe{
-    width: 25vw;
-    margin-bottom: 20px;
+section.finalsection ul li p{
+    font-weight: 200;
+    color: black;
+    font-size: 1.7rem;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+}
+
+section.finalsection ul li img{
+    margin-right: 10px;
+    font-weight: 200;
+    color: rgb(2, 2, 2);
+    font-size: 1.7rem;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+}
+
+/* Contactanos */
+
+.contactsection{
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+}
+section.contactsection div h4{
+    color:white;
+    font-weight: 600;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+section.contactsection div p{
+    color:black;
+    font-weight: 600;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contactsection__button{
+    background-color: #4CAF50;
+    padding: 16px 32px;
+    text-align: center;
+    border: 2px solid white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-left: 60px;
+    color: white;
+}
+
+.contactsection__button--txtdec{
+    text-decoration: none;
+    color: inherit;
+}
+
+.contactsection__button:hover{
+    background-color: white;
+    color: #4CAF50;
+  }
+
+.contactsection__button--txtdec:hover{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Css de footer */
 
 footer{
     text-align: center;
-    background-color: rgba(5, 102, 141, 0.6);
+    /* background-color: rgba(5, 102, 141, 0.6); */
+    background-color: black;
     padding: 5px 5px;
     }
 footer h3{
@@ -405,9 +468,22 @@ footer h3{
     font-size: 1.8rem;
     font-family: 'Roboto', sans-serif;
     margin-top: 15px;
+} 
+
+footer a{
+    text-decoration: none;
 }
+
 footer a img{
     margin: 15px 15px;
+}
+
+footer p{
+    color: white;
+    font-weight: 200;
+    font-size: 1.7rem;
+    font-family:'Lato', sans-serif;
+    margin-top: 10px;
 }
 
 /* Breakpoint mobile */
@@ -584,7 +660,7 @@ footer a img{
     
     .finalsection__tittle{
         font-size: 3rem;
-        font-family: 'Aboreto', sans-serif;
+        font-family:'Roboto', sans-serif;
         padding: 30px 0px 0px 0px;
     }
     
@@ -601,6 +677,7 @@ footer a img{
     section.finalsection article h3{
         font-size: 2.5rem;      
     }
+    
          
     article iframe{
         height: auto;

@@ -18,18 +18,20 @@ $colores:(
 );
 
 //sizes
-$sizeTittle: 5rem;
-$sizeText: 2rem;
-$sizeMedium: 2.5rem;
-$sizeSmall: 1.7rem;
-$sizeLarge: 3rem;
+$sizefont:(
+'xl': 5rem,
+'l': 3rem,
+'m': 2.5rem,
+'s': 2rem,
+'xs': 1.7rem,
+);
 
 //weights
 $weightTittle: 600;
 $weightText: 200;
 $weightMedium: 400;
 
-//Flex mixing
+//Flex mixin
 @mixin flex($direction, $justifyC, $alignI){
     display: flex;
     flex-direction: $direction;

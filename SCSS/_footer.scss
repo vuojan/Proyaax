@@ -19,7 +19,7 @@ footer{
     p{
         color: white;
         font-weight: $weightText;
-        font-size: 1.7rem;
+        font-size: map-get($map:$sizefont , $key:'xs' );
         font-family: $textFont;
         margin-top: 10px;
     }

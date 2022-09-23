@@ -32,7 +32,7 @@
     margin-top: 50px;
     &__tittle{
         color: map-get($map:$colores, $key:'main');
-        font-size: $sizeTittle;
+        font-size: map-get($map:$sizefont , $key:'xl' );
         font-family: $tittleFont;
         margin-bottom: 30px;
         display: inline-block;
@@ -53,7 +53,7 @@
     }
     &__text{
         color: map-get($map:$colores, $key:'black');
-        font-size: $sizeText;
+        font-size: map-get($map:$sizefont , $key:'s' );
         line-height: 3rem;
         font-family: $textFont;
         margin: 30px;
@@ -116,7 +116,7 @@
     &__text{
         color: rgb(2, 2, 2);
         font-family: $textFont;
-        font-size: $sizeMedium;
+        font-size: map-get($map:$sizefont , $key:'m' );
         line-height: 3.5rem;
         margin-top: 50px;
         font-weight: $weightText;
@@ -137,7 +137,7 @@
         &--button{
             background-color: map-get($map:$colores , $key:'secondaryButton' );
             color:white;
-            font-size: $sizeText;
+            font-size: map-get($map:$sizefont , $key:'s' );
             padding: 7px 25px;
             transition: all 0.5s;
             cursor: pointer;
@@ -181,7 +181,7 @@ section.finalsection{
             margin: 0 auto;
         }
         h3{
-            font-size: $sizeMedium;
+            font-size: map-get($map:$sizefont , $key:'m' );
             font-family: $tittleFont;
             margin-top: 15px;
             color: map-get($map:$colores , $key:'secondary' );
@@ -189,7 +189,7 @@ section.finalsection{
         }
         p{
             font-family: $textFont;
-            font-size: $sizeSmall;
+            font-size: map-get($map:$sizefont , $key:'xs' );
             margin-top: 15px;
             color: map-get($map:$colores , $key:'black');
             line-height: 3rem;
@@ -211,7 +211,7 @@ section.finalsection{
     padding: 30px;
     &__tittle{
         font-family: $tittleFont;
-        font-size: $sizeText;
+        font-size: map-get($map:$sizefont , $key:'s' );
         margin-bottom: 15px;
         color:map-get($map:$colores , $key:'secondary');
         font-weight: $weightTittle;
@@ -227,7 +227,7 @@ section.finalsection{
 aside.aside{
     ul{
         li{
-            font-size: $sizeSmall;
+            font-size: map-get($map:$sizefont , $key:'xs' );
             line-height: 3rem;
             margin: 20px;
             @include flex(row,normal,center);
@@ -276,14 +276,14 @@ aside.aside{
 
     .aside{
         &__tittle{
-            font-size: $sizeMedium;
+            font-size: map-get($map:$sizefont , $key:'m' );
         }
     }
 
     aside.aside{
         ul{ 
             li{
-                font-size: $sizeText;
+                font-size: map-get($map:$sizefont , $key:'s' );
                 img{
                     width: 20px;
                 }
@@ -353,12 +353,12 @@ aside.aside{
 
     .mainsection{
         &__tittle{
-            font-size: $sizeLarge;
+            font-size: map-get($map:$sizefont , $key:'l' );
             padding: 10px 10px;
             margin-bottom: 10px;
         }
         &__text{
-            font-size: 1.7rem;
+            font-size: map-get($map:$sizefont , $key:'xs' );
             margin: 0px;
             padding-right: 25px;
             padding-left: 25px;
@@ -381,12 +381,12 @@ aside.aside{
 
     .finalsection{
         &__tittle{
-            font-size: $sizeLarge;
+            font-size: map-get($map:$sizefont , $key:'l' );
             padding-top: 15px;
             margin-top: 30px; 
         }
         &__text{
-            font-size: $sizeSmall;
+            font-size: map-get($map:$sizefont , $key:'xs' );
             line-height: 3.5rem;
             margin-top: 15px;
         }
@@ -412,7 +412,7 @@ aside.aside{
             }
         }
         h3{
-            font-size: $sizeText;
+            font-size: map-get($map:$sizefont , $key:'s');
             padding-left: 25px;
             padding-right: 25px;
         }
@@ -425,13 +425,13 @@ aside.aside{
 
     .aside{
         &__tittle{
-            font-size: $sizeText;
+            font-size: map-get($map:$sizefont , $key:'s' );
         }
     }
     aside.aside{
         ul{
             li{
-                font-size: $sizeSmall;
+                font-size: map-get($map:$sizefont , $key:'xs' );
                 img{
                     width: 15px;
                 }

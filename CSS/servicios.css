@@ -162,6 +162,12 @@ header img{
     object-fit: fill;
     width: 260px;
 }
+
+.accordion-item .collapse.show{
+background-color: transparent !important;
+
+}
+
 .thirdsection{
     background-color: white;
     margin-top: 90px;

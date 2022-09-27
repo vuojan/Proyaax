@@ -52,8 +52,7 @@ header img{
 .mainsection{
     text-align: center;
     font-weight: 200;
-    margin: 50px 0;
-    
+    margin: 50px 0 30px 0;
 }
 .mainsection--flex{
     display: flex;
@@ -63,8 +62,9 @@ header img{
 .mainsection__tittle{
     color: rgba(103, 148, 54, 1);
     font-size: 5rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 600;
+    margin: 0 20px;
     
 }
 .mainsection__tittle--color{
@@ -74,7 +74,7 @@ header img{
 .mainsection__text{
     color: rgb(2, 2, 2);
     font-size: 1.8rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 30px;
     width: 20%;
     text-align: left;
@@ -108,7 +108,6 @@ header img{
 }
 
 .thirdsection{
-    background-color: rgb(235, 242, 250, 0.7);
     padding: 40px 0;
     
 }
@@ -179,6 +178,7 @@ section.contactsection div p{
     font-weight: 600;
     border-radius: 10px;
     margin-left: 60px;
+    margin-right: 60px;
     color: white;
 }
 
@@ -224,6 +224,83 @@ section.contactsection div p{
         color: white;
         font-weight: 200;
         font-size: 1.7rem;
-        font-family:'Lato', sans-serif;
+        font-family:'Roboto', sans-serif;
          margin-top: 10px;
     }
+
+@media (max-width: 1200px){
+    
+    .mainsection__text{
+        width: 25%;
+        }
+    .contactsection{
+        padding: 70px 50px;
+    }    
+}
+
+@media (max-width: 992px){
+    
+    .mainsection__text{
+        width: 30%;
+        }
+}
+
+@media (max-width: 768px){
+
+    .mainsection--flex{
+        flex-direction: column;
+    }
+
+    .mainsection__text{
+        width: 50%;
+        text-align: center;
+        }
+    
+    .mainsection__img{
+        width: 300px;
+    }
+
+    .contactsection{
+        flex-direction: column;
+        text-align: center;
+    }
+    .contactsection__button{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px){
+    
+    header img{
+        height: 200px;
+        object-fit: cover;
+        margin: 0 0;
+    }
+
+    .mainsection{
+        margin: 15px 0;
+    }
+
+    .mainsection__tittle{
+        font-size: 3rem;
+    }
+
+    .mainsection__text{
+        width: 80%;
+        text-align: center;
+    }
+
+    section.contactsection div h3{
+        font-size: 2.5rem;
+    }
+    section.contactsection div p{
+        font-size: 2rem;
+    }
+    
+    .contactsection__button{
+        font-size: 2rem;
+    }
+
+}

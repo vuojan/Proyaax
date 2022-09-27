@@ -56,31 +56,35 @@ header img{
 .mainsection{
     text-align: center;
     background-color: white;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
+    background-image: url(../imagenes/stock-photo-art-concrete-texture-for-background-in-black-grey-and-white-colors-298514801.jpg);
+    background-size: cover;
 }
 
 .mainsection__tittle{
-    color: rgba(103, 148, 54, 1);
+    color: black;
     font-size: 5rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     display: inline-block;
-    margin-bottom: 30px;
+    margin: 0 15px 30px 15px;
     font-weight: 600;
 }
 .mainsection__tittle--color{
-    color: rgba(103, 148, 54, 0.8);
+    color: green;
 }
 .mainsection__text{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 3rem;
-    font-weight: 200;
-    margin-bottom: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
     color: black;
 
 }
 .mainsection--flex{
     display: flex;
     justify-content: center;
+    padding: 50px;
+    
 }
 
 
@@ -107,7 +111,7 @@ div.mainsection__form div:not(:nth-child(6)) input,textarea{
     font-weight: 200;
     color: rgb(2, 2, 2);
     font-size: 1.8rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 30px;
     width: 20vw;
     padding: 10px;
@@ -129,7 +133,7 @@ div.mainsection__form div:not(:nth-child(6)) input:focus,textarea:focus{
 
 .formButon{
     font-size: 2rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 15px 15px;
     margin: 0 15px 30px 15px;
     border-radius: 10px;
@@ -172,7 +176,6 @@ div.mainsection__form div:not(:nth-child(6)) input:focus,textarea:focus{
     border-color: rgba(103, 148, 54, 1);
     border-width: thick;
     width: 25vw;
-    
 }
 
 .finalsection__article--flex{
@@ -185,7 +188,7 @@ div.mainsection__form div:not(:nth-child(6)) input:focus,textarea:focus{
     color:black;
     font-weight: 600;
     font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin-bottom: 10px;
     margin-top: 0px;
     
@@ -200,7 +203,7 @@ div.mainsection__form div:not(:nth-child(6)) input:focus,textarea:focus{
     font-weight: 200;
     color: rgb(2, 2, 2);
     font-size: 1.7rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 30px;
     text-align: left;
 }
@@ -254,6 +257,103 @@ footer p{
     color: white;
     font-weight: 200;
     font-size: 1.7rem;
-    font-family:'Lato', sans-serif;
+    font-family:'Roboto', sans-serif;
      margin-top: 10px;
 }
+
+@media (max-width: 1200px){
+
+    .mainsection__form{
+        width: 30vw;
+    }
+
+    div.mainsection__form div:not(:nth-child(6)) input,textarea{
+        width: 25vw;
+    }
+
+    .formButon{
+        width: 25vw;
+    }
+
+    .finalsection_article--box{ 
+    width: 30vw;
+
+    }
+}
+
+@media (max-width: 992px){
+
+    .mainsection__form{
+        width: 35vw;
+    }
+
+    div.mainsection__form div:not(:nth-child(6)) input,textarea{
+        width: 30vw;
+    }
+
+    .formButon{
+        width: 30vw;
+    }
+
+    .finalsection_article--box{ 
+        width: 35vw;
+
+    }
+}
+
+@media (max-width: 768px){
+
+    .mainsection--flex{
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainsection__form{
+        width: 60vw;
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    div.mainsection__form div:not(:nth-child(6)) input,textarea{
+        width: 50vw;
+    }
+
+    .formButon{
+        width: 50vw;
+    }
+
+    .finalsection_article--box{ 
+        width: 60vw;
+
+    }
+}
+    
+@media (max-width: 576px){
+
+    header img{
+        height: 200px;
+        object-fit: cover;
+        margin: 0 0;
+    }
+
+    .mainsection{
+        padding: 15px 0;
+    }
+
+    .mainsection__tittle{
+        font-size: 3rem;
+    }
+
+    .mainsection__text{
+        font-size: 1.8rem;
+    }
+
+    .mainsection--flex{
+        padding: 15px;
+    }
+
+}
+
+
+

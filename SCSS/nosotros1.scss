@@ -53,7 +53,7 @@
     }
     &__text{
         color: map-get($map:$colores, $key:'black');
-        font-size: map-get($map:$sizefont , $key:'s' );
+        font-size: map-get($map:$sizefont , $key:'xs' );
         line-height: 3rem;
         font-family: $textFont;
         margin: 30px;
@@ -176,7 +176,7 @@
 section.finalsection{
     div{
         img{
-            width: 20vw;
+            width: 100%;
             border-radius: 10px;
             margin: 0 auto;
         }
@@ -189,12 +189,12 @@ section.finalsection{
         }
         p{
             font-family: $textFont;
-            font-size: map-get($map:$sizefont , $key:'xs' );
+            font-size: map-get($map:$sizefont , $key:'xxs' );
             margin-top: 15px;
             color: map-get($map:$colores , $key:'black');
             line-height: 3rem;
             font-weight: $weightText;
-            flex-grow: 1; 
+            flex-grow: 1;
         }
     }
 }
@@ -227,7 +227,7 @@ section.finalsection{
 aside.aside{
     ul{
         li{
-            font-size: map-get($map:$sizefont , $key:'xs' );
+            font-size: map-get($map:$sizefont , $key:'xxs' );
             line-height: 3rem;
             margin: 20px;
             @include flex(row,normal,center);
@@ -264,7 +264,12 @@ aside.aside{
     to   { opacity: 1; }  
 }
 
-@media (max-width: 992px){
+@media (max-width: 1200px){
+    #animacion{
+        width: 350px;
+        height: 250px;
+    }
+
     .containercss{
         grid-template-columns: 100vw;
         grid-template-areas: 
@@ -294,6 +299,17 @@ aside.aside{
     .finalsection{
         &__figure{
             &--width{
+                width: 25vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+
+    .finalsection{
+        &__figure{
+            &--width{
                 width: 30vw;
                 margin: 30px 30px;
             }
@@ -303,7 +319,7 @@ aside.aside{
     section.finalsection{
         div{
             img{
-                width: 30vw;
+                width: 100%;
             }
         }
     }
@@ -330,6 +346,14 @@ aside.aside{
         margin-right: 15px;
         margin-left: 15px;
     }
+
+    .finalsection{
+        &__figure{
+            &--width{
+                width: 35vw;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px){
@@ -352,13 +376,14 @@ aside.aside{
     }
 
     .mainsection{
+        margin-top: 15px;
         &__tittle{
             font-size: map-get($map:$sizefont , $key:'l' );
             padding: 10px 10px;
             margin-bottom: 10px;
         }
         &__text{
-            font-size: map-get($map:$sizefont , $key:'xs' );
+            font-size: map-get($map:$sizefont , $key:'xxs' );
             margin: 0px;
             padding-right: 25px;
             padding-left: 25px;
@@ -386,7 +411,7 @@ aside.aside{
             margin-top: 30px; 
         }
         &__text{
-            font-size: map-get($map:$sizefont , $key:'xs' );
+            font-size: map-get($map:$sizefont , $key:'xxs' );
             line-height: 3.5rem;
             margin-top: 15px;
         }
@@ -408,7 +433,7 @@ aside.aside{
     section.finalsection{
         div{
             img{
-                width: 60vw;
+                width: 100%;
             }
         }
         h3{
@@ -431,7 +456,7 @@ aside.aside{
     aside.aside{
         ul{
             li{
-                font-size: map-get($map:$sizefont , $key:'xs' );
+                font-size: map-get($map:$sizefont , $key:'xxs' );
                 img{
                     width: 15px;
                 }

@@ -1,0 +1,292 @@
+@import "_commons";
+@import "_navbar";
+@import "_footer";
+
+//Css de mainsection
+
+.mainsection{
+    text-align: center;
+    background-color: white;
+    padding: 50px 0 0 0;
+    background-image: url(../imagenes/stock-photo-art-concrete-texture-for-background-in-black-grey-and-white-colors-298514801.jpg);
+    background-size: cover;
+    &__tittle{
+        color: black;
+        font-size: map-get($map:$sizefont , $key:'xl' );
+        font-family: $tittleFont;
+        display: inline-block;
+        margin: 0 15px 30px 15px;
+        font-weight: $weightTittle;
+        &--color{
+            color: green;
+        }
+    }
+    &__text{
+        font-family: $textFont;
+        font-size: map-get($map:$sizefont , $key:'l' );
+        font-weight: $weightTittle;
+        margin-bottom: 10px;
+        color: black; 
+    }
+    &--flex{
+        @include flex(row,center,normal);
+        padding: 50px; 
+    }
+    &__form{
+        padding: 30px 30px 0 30px;
+        background-color: white;
+        margin-right: 80px;
+        width: 25vw;
+        border-radius: 10px;
+        border-top: solid;
+        border-bottom: solid;
+        border-color: map-get($map:$colores , $key:'main' );
+        border-width: thick;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        &--flex{
+            @include flex(column,normal,normal);
+            height: 100%; 
+        }
+    } 
+}
+
+div.mainsection__form{
+    div:not(:nth-child(6)){
+        input,textarea{
+            font-weight: $weightText;
+            color: rgb(2, 2, 2);
+            font-size: map-get($map:$sizefont , $key:'xs' );
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 30px;
+            width: 20vw;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+            border-style: solid;
+            border-width: 1px;
+            border-color: map-get($map:$colores , $key:'main' );
+            &:focus{
+                outline: none;
+                border-width: 2px;
+            } 
+        }
+    }
+}
+
+textarea{
+    margin-top: 30px;
+}
+
+.form__button--flex{
+    display: flex;
+    margin-top: auto;
+}
+
+.formButon{
+    font-size: map-get($map:$sizefont , $key:'s' );
+    font-family: $textFont;
+    padding: 15px 15px;
+    margin: 0 15px 30px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: $weightText;
+    width: 20vw;
+    background-color: rgba(103, 148, 54, 0.9);
+    color: white;
+    box-shadow: 0 9px #999;
+    &:hover{
+        border-color: map-get($map:$colores , $key:'main' );
+    }
+    &:active{
+        box-shadow: 0 5px #666;
+        transform: translateY(4px); 
+    }
+}
+
+//Css de datos de contacto
+
+.finalsection{
+    &__article{
+        &--box{
+            background-color: white;
+            padding: 30px 30px 0 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-top: solid;
+            border-bottom: solid;
+            border-color: map-get($map:$colores , $key:'main' );
+            border-width: thick;
+            width: 25vw; 
+        }
+        &--flex{
+            @include flex(row,normal,flex-start);
+            // display: flex;
+            // align-items: flex-start;
+            // text-align: left; 
+        }
+    }
+    &__subtittle{
+        color:black;
+        font-weight: $weightTittle;
+        font-size: map-get($map:$sizefont , $key:'s' );
+        font-family: $tittleFont;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        text-align: left;
+    }
+    &__img{
+        width: 35px;
+        margin-right: 20px;
+    }
+    &__text{
+        font-weight: $weightText;
+        color: rgb(2, 2, 2);
+        font-size: map-get($map:$sizefont , $key:'xxs' );
+        font-family: $textFont;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    &__text{
+        &--list{
+            list-style-type: none;
+            line-height: 3rem;
+            margin-bottom: 30px;
+            font-weight: $weightText;
+            font-size: map-get($map:$sizefont , $key:'xxs' );
+            font-family: $tittleFont;
+            padding: 0;
+            text-align: left;
+        }
+    }
+}
+
+div iframe{
+    width: 100%;
+    margin-bottom: 30px;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+//Breakpoints responsive
+
+@media (max-width: 1200px){
+
+    .mainsection{
+        &__form{
+            width: 30vw;
+        }
+    }
+
+    div.mainsection__form{
+        div:not(:nth-child(6)){
+            input,textarea{
+                width: 25vw;  
+            }
+        }
+    }
+
+    .formButon{
+        width: 25vw;
+    }
+
+    .finalsection{
+        &__article{
+            &--box{
+                width: 30vw; 
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+
+    .mainsection{
+        &__form{
+            width: 35vw;
+        }
+    }
+
+    div.mainsection__form{
+        div:not(:nth-child(6)){
+            input,textarea{
+                width: 30vw;  
+            }
+        }
+    }
+
+    .formButon{
+        width: 30vw;
+    }
+
+    .finalsection{
+        &__article{
+            &--box{
+                width: 35vw; 
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+
+    .mainsection{
+        &--flex{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__form{
+            width: 60vw;
+            margin-bottom: 30px;
+            margin-right: 0; 
+        }
+    }
+
+    div.mainsection__form{
+        div:not(:nth-child(6)){
+            input,textarea{
+                width: 50vw;  
+            }
+        }
+    }
+
+    .formButon{
+        width: 50vw;
+    }
+
+    .finalsection{
+        &__article{
+            &--box{
+                width: 60vw; 
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+
+    header{
+        img{
+            height: 200px;
+            object-fit: cover;
+            margin: 0 0; 
+        }
+    }
+
+    .mainsection{
+        padding: 15px 0;
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key:'l' );
+        }
+        &__text{
+            font-size: map-get($map:$sizefont , $key:'xs' );
+        }
+        &--flex{
+            padding: 15px;
+        }
+    }
+}
+
+
+
+

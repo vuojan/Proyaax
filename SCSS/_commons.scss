@@ -11,20 +11,22 @@ $colores:(
 'mainSub': rgba(103, 148, 54, 0.8),
 'secondarySub': rgba(5, 102, 141, 0.8),
 'secondaryButton': rgba(5, 102, 141, 0.75),
-'black': rgb(2, 2, 2),
 'backGround': rgb(235, 242, 250, 0.7),
 'backGround1': rgba(103, 148, 54, .25),
-'backGround3': white,
 );
 
 //sizes
 $sizefont:(
+'xxl': 7rem,
+'xll': 6rem,    
 'xl': 5rem,
+'ll': 4rem,
 'l': 3rem,
 'm': 2.5rem,
 's': 2rem,
 'xs': 1.8rem,
 'xxs': 1.7rem,
+'xxxs': 1.5rem,
 );
 
 //weights

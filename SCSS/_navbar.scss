@@ -1,7 +1,7 @@
 /* Css de nav bootstrap */
 
 #navegador{
-    background-color: map-get($map:$colores , $key:'backGround3');
+    background-color: white;
     position: sticky;
     top: 0;
     left: 0;
@@ -18,7 +18,7 @@
     div.navbar-nav{
         a{
             font-size: map-get($map:$sizefont , $key:'m' );
-            color: map-get($map:$colores , $key:'black');
+            color: black;
             font-weight: $weightMedium;
             font-family: $tittleFont;
             margin: 0 10px;

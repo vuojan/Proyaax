@@ -166,7 +166,7 @@ div.mainsection__form div:not(:nth-child(6)) input:focus,textarea:focus{
 
 
 
-.finalsection_article--box{
+.finalsection__article--box{
     background-color: white;
     padding: 30px 30px 0 30px;
     border-radius: 10px;
@@ -275,7 +275,7 @@ footer p{
         width: 25vw;
     }
 
-    .finalsection_article--box{ 
+    .finalsection__article--box{ 
     width: 30vw;
 
     }

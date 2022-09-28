@@ -548,6 +548,7 @@ section.contactsection div p {
     margin: 0 0;
   }
   .mainsection {
+    margin-top: 0px;
     margin-bottom: 50px;
   }
   .mainsection__tittle {
@@ -631,4 +632,4 @@ section.contactsection div p {
   .contactsection__buton {
     font-size: 2rem;
   }
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index1.css.map */

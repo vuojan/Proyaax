@@ -80,7 +80,7 @@ footer p {
   color: rgb(103, 148, 54);
   font-size: 7rem;
   font-family: "Lato", sans-serif;
-  font-weight: 200;
+  font-weight: 600;
   margin-right: 90px;
   margin-bottom: 30px;
 }
@@ -277,6 +277,7 @@ footer p {
   .mainsection__text {
     margin: 0px 0px 20px 0px;
     line-height: 3rem;
+    font-size: 1.7rem;
   }
   #accordionExample button {
     font-size: 2rem;

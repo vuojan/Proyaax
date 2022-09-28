@@ -108,7 +108,7 @@
     text-align: center;
     margin-bottom: 90px;
     &--flex{
-        @include flex(column,center,center);   
+        @include flex(row,center,center);   
     }
     &__img{
         width: 400px;

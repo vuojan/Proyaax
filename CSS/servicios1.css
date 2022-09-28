@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+header img {
+  width: 100%;
+}
+
+/* Css de nav bootstrap */
+#navegador {
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+#navegador div.container {
+  width: auto;
+}
+#navegador div.container a img {
+  margin-right: 30px;
+}
+#navegador div.navbar-nav a {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin: 0 10px;
+}
+#navegador div.navbar-nav a:hover {
+  color: rgb(103, 148, 54);
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  padding: 5px 5px;
+}
+footer h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  margin-top: 15px;
+}
+footer a {
+  text-decoration: none;
+}
+footer a img {
+  margin: 15px 15px;
+}
+footer p {
+  color: white;
+  font-weight: 200;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+}
+
+.mainsection {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.mainsection__tittle {
+  color: rgb(103, 148, 54);
+  font-size: 7rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  margin-right: 90px;
+  margin-bottom: 30px;
+}
+.mainsection__tittle--color {
+  color: rgba(103, 148, 54, 0.8);
+}
+.mainsection__text {
+  color: rgb(2, 2, 2);
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 3rem;
+  font-weight: 200;
+  width: 30vw;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.secondarysection {
+  text-align: center;
+  font-weight: 600;
+  background-color: rgba(235, 242, 250, 0.7);
+}
+
+.borde {
+  border-bottom: none;
+}
+
+.borderText {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: none;
+}
+
+#accordionExample {
+  width: 60vw;
+  margin: 0px auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#accordionExample div.accordion-item {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+#accordionExample button {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(235, 242, 250, 0.7);
+  font-size: 2.5rem;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: rgb(5, 102, 141);
+  font-weight: 600;
+  box-sizing: border-box;
+  border-left: 0;
+  border-right: 0;
+  box-shadow: none;
+}
+#accordionExample button:hover {
+  box-shadow: none;
+}
+#accordionExample button span {
+  color: rgba(5, 102, 141, 0.8);
+}
+#accordionExample div.accordion-body {
+  padding: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  justify-content: center;
+}
+#accordionExample div.accordion-body p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  padding: 20px;
+  align-self: center;
+  text-align: left;
+}
+#accordionExample div.accordion-body img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 275px;
+}
+
+.thirdsection {
+  background-color: white;
+  margin-top: 90px;
+  text-align: center;
+  margin-bottom: 90px;
+}
+.thirdsection--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.thirdsection__img {
+  width: 400px;
+  margin-right: 70px;
+}
+.thirdsection__text {
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+  width: 20vw;
+  line-height: 3rem;
+  font-style: italic;
+}
+
+@media (max-width: 1200px) {
+  .mainsection__tittle {
+    font-size: 6rem;
+  }
+  #accordionExample {
+    width: 70vw;
+  }
+  .thirdsection__img {
+    width: 350px;
+  }
+  .thirdsection__text {
+    width: 30vw;
+  }
+}
+@media (max-width: 992px) {
+  .mainsection__tittle {
+    font-size: 5rem;
+  }
+  .mainsection__text {
+    width: 40vw;
+  }
+  #accordionExample {
+    width: 80vw;
+  }
+  .thirdsection__img {
+    width: 300px;
+  }
+  .thirdsection__text {
+    width: 35vw;
+  }
+}
+@media (max-width: 768px) {
+  .mainsection {
+    flex-direction: column;
+  }
+  .mainsection__tittle {
+    margin-right: 0;
+  }
+  .mainsection__text {
+    width: 80vw;
+  }
+  #accordionExample {
+    width: 60vw;
+  }
+  #accordionExample div.accordion-body {
+    flex-direction: column;
+  }
+  #accordionExample div.accordion-body img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    width: 100%;
+    align-self: center;
+  }
+  #accordionExample div.accordion-body p {
+    width: 80%;
+    text-align: center;
+  }
+  .thirdsection {
+    padding: 0 20px;
+  }
+  .thirdsection__img {
+    width: 250px;
+    margin-right: 50px;
+  }
+  .thirdsection__text {
+    width: 40vw;
+  }
+}
+@media (max-width: 576px) {
+  header img {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 0;
+  }
+  .mainsection {
+    margin-top: 0;
+  }
+  .mainsection__tittle {
+    font-size: 3rem;
+    margin-top: 15px;
+  }
+  .mainsection__text {
+    margin: 0px 0px 20px 0px;
+    line-height: 3rem;
+  }
+  #accordionExample button {
+    font-size: 2rem;
+  }
+  #accordionExample div.accordion-body p {
+    font-size: 1.5rem;
+  }
+  .thirdsection {
+    margin: 20px 0;
+  }
+  .thirdsection--flex {
+    flex-direction: column;
+  }
+  .thirdsection__img {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .thirdsection__text {
+    font-size: 1.7rem;
+    width: 50vw;
+  }
+}/*# sourceMappingURL=servicios1.css.map */

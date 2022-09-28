@@ -1,0 +1,630 @@
+@import "_commons";
+@import "_navbar";
+@import "_footer";
+
+//Css del main
+
+//Css de mainsection
+
+.mainsection{
+    text-align: center;
+    font-weight: $weightText;
+    @include flex(row,center,center);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    &__tittle{
+        color: map-get($map:$colores , $key:'main' );
+        font-size: map-get($map:$sizefont , $key:'xxl' );
+        font-family: $tittleFont;
+        margin: 20px 0px;
+        margin-right: 90px;
+        display: inline-block;
+        font-weight: $weightTittle;
+        animation: fadein 2s ease-in;
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }  
+        } 
+        &--color{
+            color: map-get($map:$colores , $key:'mainSub' )
+        }
+        &--subrayado{
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 4px;
+            transition: background-size .8s;
+            &:hover,&:focus{
+                background-size: 100% 4px;
+            }
+        }
+    }
+    &__text{
+        color: black;
+        font-size: map-get($map:$sizefont , $key:'xs' );
+        font-family: $textFont;
+        margin: 0 0 30px 0;
+        line-height: 3rem;
+        text-align: justify;
+        width: 30vw;
+        &--color{
+            color: rgba(103, 148, 54, 0.9);
+        }
+    }
+}
+
+//Css de secondary section
+
+.secondarysection{
+    text-align: center;
+    padding: 70px 0 40px 0;
+    background-color: map-get($map:$colores , $key:'backGround' );
+    &--flex{
+        @include flex(row,center,normal);
+        flex-wrap: wrap;
+    }
+    &__tittle{
+        color: map-get($map:$colores , $key:'secondary' );
+        font-size: map-get($map:$sizefont , $key: 'm' );
+        font-family: $tittleFont;
+        margin-top: 20px;
+        font-weight: $weightText;
+        &--main{
+            color: map-get($map:$colores , $key:'secondary' );
+            font-size: map-get($map:$sizefont , $key: 'xl' );
+            font-family: $textFont;
+            margin-bottom: 50px;
+            display: inline-block;
+            font-weight: $weightTittle;
+        }
+        &--color{
+            color: map-get($map:$colores , $key:'secondarySub' );
+        }
+    }
+    &__text{
+        color: black;
+        font-size: map-get($map:$sizefont , $key: 'xxs' );
+        font-family: $textFont;
+        margin-top: 10px;
+        line-height: 2.8rem ;
+        flex-grow: 1;  
+        &--txtdec{
+            text-decoration: none;
+        }
+    }
+    &__article{
+        &--borde{
+            position: relative;
+            &::before{
+                content:'';
+                position: absolute;
+                border-bottom: 4px transparent solid;
+                border-left: 4px transparent solid;
+                box-sizing: border-box;
+                width: 0;
+                height: 0;
+                bottom: 0px;
+                left: 0px;
+                transition: 1s ease-in-out;
+                z-index: 1;
+            }
+            &::after{
+                content:'';
+                position: absolute;
+                box-sizing: border-box;
+                border-top: 4px transparent solid;
+                border-right: 4px transparent solid;
+                width: 0;
+                height: 0;
+                top: 0px;
+                right: 0px;
+                transition: 1s ease-in-out;
+                z-index: 1; 
+            }
+            &:hover::after,&:hover::before{
+                width: 100%;
+                height:100%;
+                border-color: rgba(5, 102, 141, 0.6);
+            } 
+        }
+        &--boton{
+            background-color: map-get($map:$colores , $key:'secondarySub' ); 
+            border: 1px solid white;
+            color: white;
+            padding: 5px 0px;
+            font-size: map-get($map:$sizefont , $key: 'xxs' );
+            font-family: $textFont;
+            font-weight: $weightText;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: all 0.5s;
+            border-radius: 10px;
+            z-index: 2;
+            position: relative;
+            width: 120px;
+            margin-right: auto;
+            margin-left: auto;
+            &:hover{
+                background-color: map-get($map:$colores , $key:'secondary' ); 
+            }
+            a:hover{
+                color: white;
+            } 
+        }
+        &--txtdecoration{
+            text-decoration: none;
+            color:inherit;
+        }
+    }
+}
+section.secondarysection{
+    article{
+        width: 15vw;
+        padding: 30px 20px;
+        margin-right: 35px;
+        margin-left: 35px;
+        @include flex(column,normal,normal);
+        img{
+            width: 100px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// Css de thirdsection
+
+.thirdsection{
+    text-align: center;
+    font-weight: $weightMedium;
+    background-image: url(../imagenes/fondo2.jpg);
+    padding: 70px 0 40px 0;
+    &__tittle{
+        color: black;
+        font-size: map-get($map:$sizefont , $key: 'xl' );
+        font-family: $tittleFont;
+        margin-top: 60px;
+        font-weight: $weightTittle;
+        margin-bottom: 60px;
+        &--img{
+            width: 6vw;
+        }
+    }
+    &__subtittle{
+        color:black;
+        font-size: map-get($map:$sizefont , $key: 'm' );
+        font-family: $tittleFont;
+        font-weight: $weightTittle;
+        &--img{
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        &--text{
+            color:rgb(2, 2, 2,);
+            font-size: map-get($map:$sizefont , $key: 'xxs' );
+            font-family: $textFont;
+            margin-top: 10px;
+            line-height: 2.5rem ;
+            font-weight: $weightText;
+        } 
+    }
+    &--scale{
+        transition: transform 0.3s linear;
+        &:hover{
+            transform: scale(1.2);
+            border-radius: 10px;
+        }
+    }
+    &__article{
+        padding: 30px 30px;
+        margin-bottom: 30px;
+        background-color: white;
+        border-radius: 10px;
+        width: 15vw;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+//GRID de thirdsection
+
+.containercss{
+    display: grid;
+    grid-template-columns: 20% 12% 12% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "proyectos areas areas urb"
+    "emp areas areas org";
+    justify-content: center;
+    justify-items: center;
+}
+#areas{
+    grid-area: areas;
+    justify-self: center;
+    align-self: center;
+}
+#proyectos{
+    grid-area: proyectos;
+   
+}
+#urbanizaciones{
+    grid-area: urb;
+ 
+}
+#empresas{
+    grid-area: emp;
+   
+}
+#organismos{
+    grid-area: org;
+ 
+}
+
+//css de finalsection
+
+.finalsection{
+    text-align: center;
+    padding: 70px 0 50px 0;
+    &__tittle{
+        color: map-get($map:$colores , $key:'secondary' );
+        font-size: map-get($map:$sizefont , $key: 'xl' );
+        font-family: $tittleFont;
+        display: inline-block;
+        margin-bottom: 60px;
+        font-weight: $weightTittle;
+    }
+    &--flex{
+        @include flex(row,center,center);
+    }
+    &__img{
+        width: 400px;
+        margin-right: 70px;
+    }
+}
+
+section.finalsection{
+    ul{
+        width: 25vw;
+        margin-bottom: 0; 
+        li{
+            @include flex(row,normal,flex-start);
+            list-style: none;
+            margin-bottom: 20px;
+            h3{
+                color:black;
+                font-weight: $weightText;
+                font-size: map-get($map:$sizefont , $key: 'm' );
+                font-family: $tittleFont;
+                margin-bottom: 10px;
+                margin-top: 0px;
+                color: map-get($map:$colores , $key: 'secondary' );
+                text-align: left;  
+            }
+            p{
+                font-weight: $weightText;
+                color: black;
+                font-size: map-get($map:$sizefont , $key: 'xxs' );
+                font-family: $textFont;
+                text-align: left; 
+            }
+            img{
+                margin-right: 10px; 
+            }
+        }
+    }
+}
+
+//Contactanos
+
+.contactsection{
+    background-color: #4CAF50;
+    @include flex(row,center,center);
+    padding: 70px 0;
+    &__button{
+        background-color: #4CAF50;
+        padding: 16px 32px;
+        text-align: center;
+        border: 2px solid white;
+        text-decoration: none;
+        display: inline-block;
+        font-size: map-get($map:$sizefont , $key: 'm' );
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font-family: $textFont;
+        font-weight: $weightTittle;
+        border-radius: 10px;
+        margin-left: 60px;
+        margin-right: 60px;
+        color: white;
+        &:hover{
+            background-color: white;
+            color: #4CAF50; 
+        }
+        &--txtdec{
+            text-decoration: none;
+            color: inherit;
+            &:hover{
+                text-decoration: none;
+                color: inherit;
+            }
+        } 
+    }  
+}
+
+section.contactsection{
+    div{
+        h3{
+            color:white;
+            font-weight: $weightTittle;
+            font-size: map-get($map:$sizefont , $key: 'l' );
+            font-family: $textFont;
+        }
+        p{
+            color:black;
+            font-weight: $weightTittle;
+            font-size: map-get($map:$sizefont , $key: 'm' );
+            font-family: $textFont;
+        }
+    }
+}
+
+//Breakpoints responsive
+
+@media (max-width: 1200px){
+    
+    .mainsection{
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key: 'xll' );
+        }
+    }
+
+    section.secondarysection{
+        article{
+            width: 20vw;
+        }
+    }
+
+    .thirdsection{
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key: 'll' );
+        }
+    }
+
+    .contactsection{
+        padding: 70px 50px;
+    }
+}
+
+@media (max-width: 992px){
+
+    .mainsection{
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key: 'xl' );
+        }
+        &__text{
+            width: 40vw;
+        }
+    }
+
+    section.secondarysection{ 
+        article{
+            width: 30vw;
+        }
+    }
+
+    .containercss{
+        grid-template-columns: 40% 40%;
+        grid-template-areas:
+        "areas areas"
+        "proyectos urb"
+        "emp org";
+        padding-top: 15px;
+        justify-content: center;   
+    }
+
+    .thirdsection{
+        &__tittle{
+            margin-top: 50px;
+            font-size: map-get($map:$sizefont , $key: 'xl' );
+            &--img{
+                display: none;
+            }
+        }
+        &__article{
+            padding: 30px 30px;
+            margin-bottom: 30px;
+            width: 25vw;
+        }
+        &__subtittle{
+            &--img{
+                width: 100%;
+            }
+        }
+    }
+
+    .finalsection{
+        &__img{
+            width: 300px;
+        }
+    }   
+}
+
+@media (max-width: 768px){
+
+   .mainsection{
+        flex-direction: column;
+        margin-bottom: 50px;
+        &__tittle{
+            margin-right: 0px;
+            margin-top: 0;
+        }
+        &__text{
+            width: 80vw;  
+        }
+    }
+
+    .secondarysection{
+        padding: 10px 10px;
+        &--flex{
+            @include flex(column,normal,center);
+        }
+    }
+
+    section.secondarysection{
+        article{
+            width: 70vw;
+            padding: 15px 15px;
+            height: auto;
+            margin-bottom: 25px;
+            margin-left: 0;
+            margin-right: 0;
+            img{
+                height: 100px;
+            } 
+        }
+    }
+
+    .finalsection{
+        &--flex{
+            flex-direction: column;  
+        }
+        &__img{
+            margin: 0 0 30px 0;
+        }
+    }
+
+    section.finalsection{
+        ul{
+            width: auto;
+            padding-right: 20px;
+        }
+    }
+
+    .contactsection{
+        flex-direction: column;
+        text-align: center;
+        &__button{
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+
+    header{
+        img{
+            height: 200px;
+            object-fit: cover;
+            margin: 0 0;
+        }
+    }
+
+    .mainsection{
+        margin-bottom: 50px;
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key: 'l' );
+            width: auto;
+            margin-right: 0;
+            margin-top: 15px; 
+        }
+        &__text{
+            margin: 0px 0px 20px 0px;
+            line-height: 3rem;
+            padding: 0px 20px;
+            font-size: map-get($map:$sizefont , $key: 'xxs' );
+            width: 80vw; 
+        }
+    }
+
+    .secondarysection{
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key: 'm' );
+            margin-top: 20px;
+            &--main{
+                font-size: map-get($map:$sizefont , $key: 'l' );
+                margin-bottom: 30px; 
+            }
+        }
+        &__text{
+            line-height: 2.8rem ;
+            padding-left: 15px;
+            padding-right: 15px; 
+        }
+    }
+
+    .containercss{
+        grid-template-columns: 100vw;
+        grid-template-areas:
+        "areas"
+        "proyectos"
+        "urb"
+        "emp"
+        "org";
+        align-items: center;
+        padding-top: 15px;
+        justify-items: center;
+    }
+    
+    .thirdsection{
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key: 'l' );
+            margin-top: 0px;
+            margin-bottom: 30px;
+            &--img{
+                display: none;
+            } 
+        }
+        &__subtittle{
+            font-size: map-get($map:$sizefont , $key: 'm' );
+            margin-top: 10px;
+            padding-right: 15px;
+            padding-left: 15px;
+            &--text{
+                font-size: map-get($map:$sizefont , $key: 'xxs' );
+                margin-top: 10px;
+                line-height: 2.8rem ;
+                margin-bottom: 10px;
+                padding-right: 15px;
+                padding-left: 15px;  
+            }
+            &--img{
+                width: 100%;
+            }
+        }
+        &__article{
+            width: 70vw;
+        }
+    }
+
+    .finalsection{
+        padding: 0;
+        &__tittle{
+            font-size: map-get($map:$sizefont , $key: 'l' );
+            font-family:$textFont;
+            padding: 15px 0px 0px 0px;
+        }
+        &--flex{
+            flex-direction: column; 
+        }
+    }
+
+    section.contactsection{
+        div{
+            h3{
+                font-size: map-get($map:$sizefont , $key: 'm' );
+            }
+            p{
+                font-size: map-get($map:$sizefont , $key: 'm' );
+            }
+        }
+    }
+
+    .contactsection{
+        &__buton{
+            font-size: map-get($map:$sizefont , $key: 's' );
+        }
+    }
+}
+

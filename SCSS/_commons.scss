@@ -34,12 +34,20 @@ $weightTittle: 600;
 $weightText: 200;
 $weightMedium: 400;
 
-//Flex mixin
+//flex mixin
 @mixin flex($direction, $justifyC, $alignI){
     display: flex;
     flex-direction: $direction;
     justify-content: $justifyC;
     align-items: $alignI;
+}
+
+//blockSize mixin
+@mixin font($fontfamily, $fontweight, $lineheight){
+    font-family: $fontfamily;
+    font-weight: $fontweight;
+    line-height: $lineheight;
+    
 }
 
 html{

@@ -8,23 +8,30 @@
     text-align: center;
     background-color: white;
     padding: 50px 0 0 0;
-    background-image: url(../imagenes/stock-photo-art-concrete-texture-for-background-in-black-grey-and-white-colors-298514801.jpg);
-    background-size: cover;
     &__tittle{
-        color: black;
+        color: map-get($map:$colores , $key:'main' );
         font-size: map-get($map:$sizefont , $key:'xl' );
-        font-family: $tittleFont;
+        @include font($tittleFont,$weightTittle,normal);
         display: inline-block;
         margin: 0 15px 30px 15px;
-        font-weight: $weightTittle;
         &--color{
-            color: green;
+            color: map-get($map:$colores , $key:'mainSub' );
         }
+        &--subrayado{
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 4px;
+            transition: background-size .8s;
+            &:hover,&:focus{
+                background-size: 100% 4px;
+            }
+        }
+
     }
     &__text{
-        font-family: $textFont;
+        @include font($textFont,$weightTittle,normal);
         font-size: map-get($map:$sizefont , $key:'l' );
-        font-weight: $weightTittle;
         margin-bottom: 10px;
         color: black; 
     }
@@ -53,10 +60,9 @@
 div.mainsection__form{
     div:not(:nth-child(6)){
         input,textarea{
-            font-weight: $weightText;
             color: rgb(2, 2, 2);
+            @include font($textFont,$weightText,normal);
             font-size: map-get($map:$sizefont , $key:'xs' );
-            font-family: 'Roboto', sans-serif;
             margin-bottom: 30px;
             width: 20vw;
             padding: 10px;
@@ -84,13 +90,12 @@ textarea{
 
 .formButon{
     font-size: map-get($map:$sizefont , $key:'s' );
-    font-family: $textFont;
+    @include font($textFont,$weightText,normal);
     padding: 15px 15px;
     margin: 0 15px 30px 15px;
     border-radius: 10px;
     border: none;
     outline: none;
-    font-weight: $weightText;
     width: 20vw;
     background-color: rgba(103, 148, 54, 0.9);
     color: white;
@@ -121,16 +126,12 @@ textarea{
         }
         &--flex{
             @include flex(row,normal,flex-start);
-            // display: flex;
-            // align-items: flex-start;
-            // text-align: left; 
-        }
+         }
     }
     &__subtittle{
         color:black;
-        font-weight: $weightTittle;
+        @include font($tittleFont,$weightTittle,normal);
         font-size: map-get($map:$sizefont , $key:'s' );
-        font-family: $tittleFont;
         margin-bottom: 10px;
         margin-top: 0px;
         text-align: left;
@@ -140,21 +141,18 @@ textarea{
         margin-right: 20px;
     }
     &__text{
-        font-weight: $weightText;
         color: rgb(2, 2, 2);
+        @include font($textFont,$weightText,normal);
         font-size: map-get($map:$sizefont , $key:'xxs' );
-        font-family: $textFont;
         margin-bottom: 30px;
         text-align: left;
     }
     &__text{
         &--list{
             list-style-type: none;
-            line-height: 3rem;
             margin-bottom: 30px;
-            font-weight: $weightText;
+            @include font($tittleFont,$weightText,3rem);
             font-size: map-get($map:$sizefont , $key:'xxs' );
-            font-family: $tittleFont;
             padding: 0;
             text-align: left;
         }

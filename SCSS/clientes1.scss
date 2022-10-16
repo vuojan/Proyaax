@@ -14,21 +14,31 @@
     &__tittle{
         color: map-get($map:$colores , $key:'main' );
         font-size: map-get($map:$sizefont , $key:'xl' );
-        font-family: $tittleFont;
-        font-weight: $weightTittle;
+        @include font($tittleFont,$weightTittle,normal);
         margin: 0 20px;
+        display: inline-block;
         &--color{
             color: map-get($map:$colores , $key:'mainSub' );
         }
+        &--subrayado{
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 4px;
+            transition: background-size .8s;
+            &:hover,&:focus{
+                background-size: 100% 4px;
+            }
+        }
+        
     }
     &__text{
         color: rgb(2, 2, 2);
         font-size: map-get($map:$sizefont , $key:'xs' );
-        font-family: $textFont;
+        @include font($textFont,$weightText,normal);
         margin-top: 30px;
         width: 20%;
         text-align: left;
-        font-weight: $weightText;
         font-style: italic;
     }
     &__img{
@@ -86,15 +96,12 @@ section.thirdsection{
         border: 2px solid white;
         text-decoration: none;
         display: inline-block;
-        font-size: 2.5rem;
-        margin: 4px 2px;
+        font-size: map-get($map:$sizefont , $key:'m' );
         transition-duration: 0.4s;
         cursor: pointer;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 600;
+        @include font($textFont,$weightTittle,normal);
         border-radius: 10px;
-        margin-left: 60px;
-        margin-right: 60px;
+        margin: 0 60px;
         color: white;
         &:hover{
             background-color: white;
@@ -115,15 +122,13 @@ section.contactsection{
     div{
         h3{
             color:white;
-            font-weight: $weightTittle;
+            @include font($textFont,$weightTittle,normal);
             font-size: map-get($map:$sizefont , $key:'l' );
-            font-family: $textFont;
         }
         p{
             color:black;
-            font-weight: $weightTittle;
+            @include font($textFont,$weightTittle,normal);
             font-size: map-get($map:$sizefont , $key:'m' );
-            font-family: $textFont;
         }
     }
 }
@@ -192,6 +197,15 @@ section.contactsection{
         &__text{
             width: 80%;
             text-align: center;
+        }
+    }
+
+    section.thirdsection{
+        div{
+            div{
+                width: 240px;
+                height: 120px;
+            }
         }
     }
 

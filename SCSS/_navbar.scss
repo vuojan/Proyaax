@@ -19,8 +19,7 @@
         a{
             font-size: map-get($map:$sizefont , $key:'m' );
             color: black;
-            font-weight: $weightMedium;
-            font-family: $tittleFont;
+            @include font($tittleFont,$weightMedium,normal);
             margin: 0 10px;
             &:hover{
                 color: map-get($map:$colores , $key:'main');

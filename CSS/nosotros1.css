@@ -33,8 +33,9 @@ header img {
 #navegador div.navbar-nav a {
   font-size: 2.5rem;
   color: black;
-  font-weight: 400;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: normal;
   margin: 0 10px;
 }
 #navegador div.navbar-nav a:hover {
@@ -48,9 +49,9 @@ footer {
 }
 footer h3 {
   color: white;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.8rem;
   margin-top: 15px;
 }
 footer a {
@@ -61,9 +62,10 @@ footer a img {
 }
 footer p {
   color: white;
-  font-weight: 200;
-  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.8rem;
   margin-top: 10px;
 }
 
@@ -95,9 +97,10 @@ footer p {
   color: rgb(103, 148, 54);
   font-size: 5rem;
   font-family: "Lato", sans-serif;
+  font-weight: 600;
+  line-height: normal;
   margin-bottom: 30px;
   display: inline-block;
-  font-weight: 600;
 }
 .mainsection__tittle--color {
   color: rgba(103, 148, 54, 0.8);
@@ -115,10 +118,10 @@ footer p {
 .mainsection__text {
   color: black;
   font-size: 1.8rem;
-  line-height: 3rem;
   font-family: "Roboto", sans-serif;
-  margin: 30px;
   font-weight: 200;
+  line-height: 3rem;
+  margin: 30px;
   text-align: justify;
 }
 .mainsection__text--width {
@@ -218,10 +221,10 @@ footer p {
 .finalsection__text {
   color: rgb(2, 2, 2);
   font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
-  line-height: 3.5rem;
-  margin-top: 50px;
   font-weight: 200;
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+  margin-top: 50px;
 }
 .finalsection--flex {
   display: flex;
@@ -249,11 +252,11 @@ footer p {
   transition: all 0.5s;
   cursor: pointer;
   margin: 20px;
-  font-weight: 200;
   font-family: "Lato", sans-serif;
+  font-weight: 200;
+  line-height: normal;
   border-radius: 10px;
   border: none;
-  line-height: normal;
 }
 .finalsection__figure--button span {
   cursor: pointer;
@@ -284,16 +287,17 @@ section.finalsection div img {
 section.finalsection div h3 {
   font-size: 2.5rem;
   font-family: "Lato", sans-serif;
+  font-weight: 200;
+  line-height: normal;
   margin-top: 15px;
   color: rgb(5, 102, 141);
-  font-weight: 200;
 }
 section.finalsection div p {
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: 3rem;
   font-size: 1.7rem;
   margin-top: 15px;
-  line-height: 3rem;
-  font-weight: 200;
   flex-grow: 1;
 }
 
@@ -309,10 +313,11 @@ section.finalsection div p {
 }
 .aside__tittle {
   font-family: "Lato", sans-serif;
+  font-weight: 600;
+  line-height: normal;
   font-size: 2rem;
   margin-bottom: 15px;
   color: rgb(5, 102, 141);
-  font-weight: 600;
 }
 .aside__list {
   list-style: none;
@@ -322,13 +327,14 @@ section.finalsection div p {
 
 aside.aside ul li {
   font-size: 1.7rem;
-  line-height: 3rem;
   margin: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: normal;
   align-items: center;
-  font-family: "Roboto", sans-serif;
   text-align: left;
   -webkit-animation: fadein 2s forwards;
           animation: fadein 2s forwards;

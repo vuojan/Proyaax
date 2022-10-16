@@ -32,8 +32,9 @@ header img {
 #navegador div.navbar-nav a {
   font-size: 2.5rem;
   color: black;
-  font-weight: 400;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: normal;
   margin: 0 10px;
 }
 #navegador div.navbar-nav a:hover {
@@ -47,9 +48,9 @@ footer {
 }
 footer h3 {
   color: white;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.8rem;
   margin-top: 15px;
 }
 footer a {
@@ -60,9 +61,10 @@ footer a img {
 }
 footer p {
   color: white;
-  font-weight: 200;
-  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.8rem;
   margin-top: 10px;
 }
 
@@ -81,18 +83,29 @@ footer p {
   font-size: 7rem;
   font-family: "Lato", sans-serif;
   font-weight: 600;
+  line-height: normal;
   margin-right: 90px;
   margin-bottom: 30px;
 }
 .mainsection__tittle--color {
   color: rgba(103, 148, 54, 0.8);
 }
+.mainsection__tittle--subrayado {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 4px;
+  transition: background-size 0.8s;
+}
+.mainsection__tittle--subrayado:hover, .mainsection__tittle--subrayado:focus {
+  background-size: 100% 4px;
+}
 .mainsection__text {
   color: rgb(2, 2, 2);
   font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
-  line-height: 3rem;
   font-weight: 200;
+  line-height: 3rem;
   width: 30vw;
   margin-bottom: 30px;
   text-align: justify;
@@ -126,12 +139,13 @@ footer p {
 }
 #accordionExample button {
   font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: normal;
   background-color: rgba(235, 242, 250, 0.7);
   font-size: 2.5rem;
   padding-top: 40px;
   padding-bottom: 40px;
   color: rgb(5, 102, 141);
-  font-weight: 600;
   box-sizing: border-box;
   border-left: 0;
   border-right: 0;
@@ -155,8 +169,8 @@ footer p {
 #accordionExample div.accordion-body p {
   font-family: "Roboto", sans-serif;
   font-weight: 200;
-  font-size: 1.7rem;
   line-height: 2.8rem;
+  font-size: 1.7rem;
   padding: 20px;
   align-self: center;
   text-align: left;
@@ -185,10 +199,10 @@ footer p {
 }
 .thirdsection__text {
   font-size: 2rem;
-  font-weight: 200;
   font-family: "Roboto", sans-serif;
-  width: 20vw;
+  font-weight: 200;
   line-height: 3rem;
+  width: 20vw;
   font-style: italic;
 }
 
@@ -278,6 +292,9 @@ footer p {
     margin: 0px 0px 20px 0px;
     line-height: 3rem;
     font-size: 1.7rem;
+  }
+  #accordionExample {
+    width: 75vw;
   }
   #accordionExample button {
     font-size: 2rem;

@@ -32,8 +32,9 @@ header img {
 #navegador div.navbar-nav a {
   font-size: 2.5rem;
   color: black;
-  font-weight: 400;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: normal;
   margin: 0 10px;
 }
 #navegador div.navbar-nav a:hover {
@@ -47,9 +48,9 @@ footer {
 }
 footer h3 {
   color: white;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.8rem;
   margin-top: 15px;
 }
 footer a {
@@ -60,9 +61,10 @@ footer a img {
 }
 footer p {
   color: white;
-  font-weight: 200;
-  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.8rem;
   margin-top: 10px;
 }
 
@@ -70,24 +72,34 @@ footer p {
   text-align: center;
   background-color: white;
   padding: 50px 0 0 0;
-  background-image: url(../imagenes/stock-photo-art-concrete-texture-for-background-in-black-grey-and-white-colors-298514801.jpg);
-  background-size: cover;
 }
 .mainsection__tittle {
-  color: black;
+  color: rgb(103, 148, 54);
   font-size: 5rem;
   font-family: "Lato", sans-serif;
+  font-weight: 600;
+  line-height: normal;
   display: inline-block;
   margin: 0 15px 30px 15px;
-  font-weight: 600;
 }
 .mainsection__tittle--color {
-  color: green;
+  color: rgba(103, 148, 54, 0.8);
+}
+.mainsection__tittle--subrayado {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 4px;
+  transition: background-size 0.8s;
+}
+.mainsection__tittle--subrayado:hover, .mainsection__tittle--subrayado:focus {
+  background-size: 100% 4px;
 }
 .mainsection__text {
   font-family: "Roboto", sans-serif;
-  font-size: 3rem;
   font-weight: 600;
+  line-height: normal;
+  font-size: 3rem;
   margin-bottom: 10px;
   color: black;
 }
@@ -119,10 +131,11 @@ footer p {
 }
 
 div.mainsection__form div:not(:nth-child(6)) input, div.mainsection__form div:not(:nth-child(6)) textarea {
-  font-weight: 200;
   color: rgb(2, 2, 2);
-  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.8rem;
   margin-bottom: 30px;
   width: 20vw;
   padding: 10px;
@@ -149,12 +162,13 @@ textarea {
 .formButon {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
   padding: 15px 15px;
   margin: 0 15px 30px 15px;
   border-radius: 10px;
   border: none;
   outline: none;
-  font-weight: 200;
   width: 20vw;
   background-color: rgba(103, 148, 54, 0.9);
   color: white;
@@ -187,9 +201,10 @@ textarea {
 }
 .finalsection__subtittle {
   color: black;
-  font-weight: 600;
-  font-size: 2rem;
   font-family: "Lato", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 2rem;
   margin-bottom: 10px;
   margin-top: 0px;
   text-align: left;
@@ -199,20 +214,21 @@ textarea {
   margin-right: 20px;
 }
 .finalsection__text {
-  font-weight: 200;
   color: rgb(2, 2, 2);
-  font-size: 1.7rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.7rem;
   margin-bottom: 30px;
   text-align: left;
 }
 .finalsection__text--list {
   list-style-type: none;
-  line-height: 3rem;
   margin-bottom: 30px;
-  font-weight: 200;
-  font-size: 1.7rem;
   font-family: "Lato", sans-serif;
+  font-weight: 200;
+  line-height: 3rem;
+  font-size: 1.7rem;
   padding: 0;
   text-align: left;
 }

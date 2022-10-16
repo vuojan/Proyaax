@@ -32,8 +32,9 @@ header img {
 #navegador div.navbar-nav a {
   font-size: 2.5rem;
   color: black;
-  font-weight: 400;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: normal;
   margin: 0 10px;
 }
 #navegador div.navbar-nav a:hover {
@@ -47,9 +48,9 @@ footer {
 }
 footer h3 {
   color: white;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.8rem;
   margin-top: 15px;
 }
 footer a {
@@ -60,9 +61,10 @@ footer a img {
 }
 footer p {
   color: white;
-  font-weight: 200;
-  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.8rem;
   margin-top: 10px;
 }
 
@@ -82,19 +84,32 @@ footer p {
   font-size: 5rem;
   font-family: "Lato", sans-serif;
   font-weight: 600;
+  line-height: normal;
   margin: 0 20px;
+  display: inline-block;
 }
 .mainsection__tittle--color {
   color: rgba(103, 148, 54, 0.8);
+}
+.mainsection__tittle--subrayado {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 4px;
+  transition: background-size 0.8s;
+}
+.mainsection__tittle--subrayado:hover, .mainsection__tittle--subrayado:focus {
+  background-size: 100% 4px;
 }
 .mainsection__text {
   color: rgb(2, 2, 2);
   font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
   margin-top: 30px;
   width: 20%;
   text-align: left;
-  font-weight: 200;
   font-style: italic;
 }
 .mainsection__img {
@@ -152,14 +167,13 @@ section.thirdsection div img {
   text-decoration: none;
   display: inline-block;
   font-size: 2.5rem;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+  line-height: normal;
   border-radius: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: 0 60px;
   color: white;
 }
 .contactsection__button:hover {
@@ -177,15 +191,17 @@ section.thirdsection div img {
 
 section.contactsection div h3 {
   color: white;
-  font-weight: 600;
-  font-size: 3rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 3rem;
 }
 section.contactsection div p {
   color: black;
-  font-weight: 600;
-  font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -238,6 +254,10 @@ section.contactsection div p {
   .mainsection__text {
     width: 80%;
     text-align: center;
+  }
+  section.thirdsection div div {
+    width: 240px;
+    height: 120px;
   }
   section.contactsection div h3 {
     font-size: 2.5rem;

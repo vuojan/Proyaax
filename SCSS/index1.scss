@@ -15,11 +15,9 @@
     &__tittle{
         color: map-get($map:$colores , $key:'main' );
         font-size: map-get($map:$sizefont , $key:'xxl' );
-        font-family: $tittleFont;
-        margin: 20px 0px;
-        margin-right: 90px;
+        @include font($tittleFont,$weightTittle,normal);
+        margin: 20px 90px 20px 0;
         display: inline-block;
-        font-weight: $weightTittle;
         animation: fadein 2s ease-in;
         @keyframes fadein {
             from { opacity: 0; }
@@ -42,9 +40,8 @@
     &__text{
         color: black;
         font-size: map-get($map:$sizefont , $key:'xs' );
-        font-family: $textFont;
+        @include font($textFont,normal,3rem);
         margin: 0 0 30px 0;
-        line-height: 3rem;
         text-align: justify;
         width: 30vw;
         &--color{
@@ -66,16 +63,14 @@
     &__tittle{
         color: map-get($map:$colores , $key:'secondary' );
         font-size: map-get($map:$sizefont , $key: 'm' );
-        font-family: $tittleFont;
+        @include font($textFont,$weightText,normal);
         margin-top: 20px;
-        font-weight: $weightText;
         &--main{
             color: map-get($map:$colores , $key:'secondary' );
             font-size: map-get($map:$sizefont , $key: 'xl' );
-            font-family: $textFont;
+            @include font($tittleFont,$weightTittle,normal);
             margin-bottom: 50px;
             display: inline-block;
-            font-weight: $weightTittle;
         }
         &--color{
             color: map-get($map:$colores , $key:'secondarySub' );
@@ -84,9 +79,8 @@
     &__text{
         color: black;
         font-size: map-get($map:$sizefont , $key: 'xxs' );
-        font-family: $textFont;
+        @include font($textFont,normal,2.8rem);
         margin-top: 10px;
-        line-height: 2.8rem ;
         flex-grow: 1;  
         &--txtdec{
             text-decoration: none;
@@ -133,8 +127,7 @@
             color: white;
             padding: 5px 0px;
             font-size: map-get($map:$sizefont , $key: 'xxs' );
-            font-family: $textFont;
-            font-weight: $weightText;
+            @include font($textFont,$weightText,normal);
             margin-top: 20px;
             cursor: pointer;
             transition: all 0.5s;
@@ -161,8 +154,7 @@ section.secondarysection{
     article{
         width: 15vw;
         padding: 30px 20px;
-        margin-right: 35px;
-        margin-left: 35px;
+        margin: 0 35px;
         @include flex(column,normal,normal);
         img{
             width: 100px;
@@ -181,10 +173,8 @@ section.secondarysection{
     &__tittle{
         color: black;
         font-size: map-get($map:$sizefont , $key: 'xl' );
-        font-family: $tittleFont;
-        margin-top: 60px;
-        font-weight: $weightTittle;
-        margin-bottom: 60px;
+        @include font($tittleFont,$weightTittle,normal);
+        margin: 60px 0;
         &--img{
             width: 6vw;
         }
@@ -192,8 +182,7 @@ section.secondarysection{
     &__subtittle{
         color:black;
         font-size: map-get($map:$sizefont , $key: 'm' );
-        font-family: $tittleFont;
-        font-weight: $weightTittle;
+        @include font($tittleFont,$weightTittle,normal);
         &--img{
             width: 100%;
             border-radius: 10px;
@@ -202,10 +191,8 @@ section.secondarysection{
         &--text{
             color:rgb(2, 2, 2,);
             font-size: map-get($map:$sizefont , $key: 'xxs' );
-            font-family: $textFont;
+            @include font($textFont,$weightText,2.5rem);
             margin-top: 10px;
-            line-height: 2.5rem ;
-            font-weight: $weightText;
         } 
     }
     &--scale{
@@ -265,12 +252,8 @@ section.secondarysection{
     text-align: center;
     padding: 70px 0 50px 0;
     &__tittle{
-        color: map-get($map:$colores , $key:'secondary' );
-        font-size: map-get($map:$sizefont , $key: 'xl' );
-        font-family: $tittleFont;
-        display: inline-block;
+        @extend .secondarysection__tittle--main;
         margin-bottom: 60px;
-        font-weight: $weightTittle;
     }
     &--flex{
         @include flex(row,center,center);
@@ -291,23 +274,20 @@ section.finalsection{
             margin-bottom: 20px;
             h3{
                 color:black;
-                font-weight: $weightText;
                 font-size: map-get($map:$sizefont , $key: 'm' );
-                font-family: $tittleFont;
+                @include font($tittleFont,$weightText,normal);
                 margin-bottom: 10px;
-                margin-top: 0px;
                 color: map-get($map:$colores , $key: 'secondary' );
                 text-align: left;  
             }
             p{
-                font-weight: $weightText;
+                @include font($textFont,$weightText,normal);
                 color: black;
                 font-size: map-get($map:$sizefont , $key: 'xxs' );
-                font-family: $textFont;
                 text-align: left; 
             }
             img{
-                margin-right: 10px; 
+                margin: 5px 10px 0 0;
             }
         }
     }
@@ -327,14 +307,11 @@ section.finalsection{
         text-decoration: none;
         display: inline-block;
         font-size: map-get($map:$sizefont , $key: 'm' );
-        margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
-        font-family: $textFont;
-        font-weight: $weightTittle;
+        @include font($textFont,$weightTittle,normal);
         border-radius: 10px;
-        margin-left: 60px;
-        margin-right: 60px;
+        margin: 0 60px;
         color: white;
         &:hover{
             background-color: white;
@@ -355,15 +332,13 @@ section.contactsection{
     div{
         h3{
             color:white;
-            font-weight: $weightTittle;
+            @include font($textFont,$weightTittle,normal);
             font-size: map-get($map:$sizefont , $key: 'l' );
-            font-family: $textFont;
         }
         p{
             color:black;
-            font-weight: $weightTittle;
+            @include font($textFont,$weightTittle,normal);
             font-size: map-get($map:$sizefont , $key: 'm' );
-            font-family: $textFont;
         }
     }
 }
@@ -455,7 +430,7 @@ section.contactsection{
         flex-direction: column;
         margin-bottom: 50px;
         &__tittle{
-            margin-right: 0px;
+            margin-right: 0;
             margin-top: 0;
         }
         &__text{
@@ -475,9 +450,7 @@ section.contactsection{
             width: 70vw;
             padding: 15px 15px;
             height: auto;
-            margin-bottom: 25px;
-            margin-left: 0;
-            margin-right: 0;
+            margin: 0 0 25px 0;
             img{
                 height: 100px;
             } 
@@ -504,9 +477,7 @@ section.contactsection{
         flex-direction: column;
         text-align: center;
         &__button{
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 20px;
+            margin: 20px 0 0 0;
         }
     }
 }

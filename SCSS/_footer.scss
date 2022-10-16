@@ -5,9 +5,7 @@ footer{
     padding: 5px 5px;
     h3{
         color:white;
-        font-weight: $weightTittle;
-        font-size: 1.8rem;
-        font-family: $textFont;
+        @include font($tittleFont,$weightTittle,1.8rem);
         margin-top: 15px;
     } 
     a{
@@ -18,9 +16,8 @@ footer{
     }
     p{
         color: white;
-        font-weight: $weightText;
+        @include font($textFont,$weightText,normal);
         font-size: map-get($map:$sizefont , $key:'xs' );
-        font-family: $textFont;
         margin-top: 10px;
     }
 }

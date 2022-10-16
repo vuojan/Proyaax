@@ -32,8 +32,9 @@ header img {
 #navegador div.navbar-nav a {
   font-size: 2.5rem;
   color: black;
-  font-weight: 400;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: normal;
   margin: 0 10px;
 }
 #navegador div.navbar-nav a:hover {
@@ -47,9 +48,9 @@ footer {
 }
 footer h3 {
   color: white;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.8rem;
   margin-top: 15px;
 }
 footer a {
@@ -60,9 +61,10 @@ footer a img {
 }
 footer p {
   color: white;
-  font-weight: 200;
-  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.8rem;
   margin-top: 10px;
 }
 
@@ -80,10 +82,10 @@ footer p {
   color: rgb(103, 148, 54);
   font-size: 7rem;
   font-family: "Lato", sans-serif;
-  margin: 20px 0px;
-  margin-right: 90px;
-  display: inline-block;
   font-weight: 600;
+  line-height: normal;
+  margin: 20px 90px 20px 0;
+  display: inline-block;
   -webkit-animation: fadein 2s ease-in;
           animation: fadein 2s ease-in;
 }
@@ -120,8 +122,9 @@ footer p {
   color: black;
   font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
-  margin: 0 0 30px 0;
+  font-weight: normal;
   line-height: 3rem;
+  margin: 0 0 30px 0;
   text-align: justify;
   width: 30vw;
 }
@@ -144,17 +147,19 @@ footer p {
 .secondarysection__tittle {
   color: rgb(5, 102, 141);
   font-size: 2.5rem;
-  font-family: "Lato", sans-serif;
-  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
+  line-height: normal;
+  margin-top: 20px;
 }
-.secondarysection__tittle--main {
+.secondarysection__tittle--main, .finalsection__tittle {
   color: rgb(5, 102, 141);
   font-size: 5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  line-height: normal;
   margin-bottom: 50px;
   display: inline-block;
-  font-weight: 600;
 }
 .secondarysection__tittle--color {
   color: rgba(5, 102, 141, 0.8);
@@ -163,8 +168,9 @@ footer p {
   color: black;
   font-size: 1.7rem;
   font-family: "Roboto", sans-serif;
-  margin-top: 10px;
+  font-weight: normal;
   line-height: 2.8rem;
+  margin-top: 10px;
   flex-grow: 1;
 }
 .secondarysection__text--txtdec {
@@ -212,6 +218,7 @@ footer p {
   font-size: 1.7rem;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
+  line-height: normal;
   margin-top: 20px;
   cursor: pointer;
   transition: all 0.5s;
@@ -236,8 +243,7 @@ footer p {
 section.secondarysection article {
   width: 15vw;
   padding: 30px 20px;
-  margin-right: 35px;
-  margin-left: 35px;
+  margin: 0 35px;
   display: flex;
   flex-direction: column;
   justify-content: normal;
@@ -258,9 +264,9 @@ section.secondarysection article img {
   color: black;
   font-size: 5rem;
   font-family: "Lato", sans-serif;
-  margin-top: 60px;
   font-weight: 600;
-  margin-bottom: 60px;
+  line-height: normal;
+  margin: 60px 0;
 }
 .thirdsection__tittle--img {
   width: 6vw;
@@ -270,6 +276,7 @@ section.secondarysection article img {
   font-size: 2.5rem;
   font-family: "Lato", sans-serif;
   font-weight: 600;
+  line-height: normal;
 }
 .thirdsection__subtittle--img {
   width: 100%;
@@ -280,9 +287,9 @@ section.secondarysection article img {
   color: rgb(2, 2, 2);
   font-size: 1.7rem;
   font-family: "Roboto", sans-serif;
-  margin-top: 10px;
-  line-height: 2.5rem;
   font-weight: 200;
+  line-height: 2.5rem;
+  margin-top: 10px;
 }
 .thirdsection--scale {
   transition: transform 0.3s linear;
@@ -336,12 +343,7 @@ section.secondarysection article img {
   padding: 70px 0 50px 0;
 }
 .finalsection__tittle {
-  color: rgb(5, 102, 141);
-  font-size: 5rem;
-  font-family: "Lato", sans-serif;
-  display: inline-block;
   margin-bottom: 60px;
-  font-weight: 600;
 }
 .finalsection--flex {
   display: flex;
@@ -368,23 +370,24 @@ section.finalsection ul li {
 }
 section.finalsection ul li h3 {
   color: black;
-  font-weight: 200;
   font-size: 2.5rem;
   font-family: "Lato", sans-serif;
+  font-weight: 200;
+  line-height: normal;
   margin-bottom: 10px;
-  margin-top: 0px;
   color: rgb(5, 102, 141);
   text-align: left;
 }
 section.finalsection ul li p {
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
+  line-height: normal;
   color: black;
   font-size: 1.7rem;
-  font-family: "Roboto", sans-serif;
   text-align: left;
 }
 section.finalsection ul li img {
-  margin-right: 10px;
+  margin: 5px 10px 0 0;
 }
 
 .contactsection {
@@ -403,14 +406,13 @@ section.finalsection ul li img {
   text-decoration: none;
   display: inline-block;
   font-size: 2.5rem;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+  line-height: normal;
   border-radius: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: 0 60px;
   color: white;
 }
 .contactsection__button:hover {
@@ -428,15 +430,17 @@ section.finalsection ul li img {
 
 section.contactsection div h3 {
   color: white;
-  font-weight: 600;
-  font-size: 3rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 3rem;
 }
 section.contactsection div p {
   color: black;
-  font-weight: 600;
-  font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -494,7 +498,7 @@ section.contactsection div p {
     margin-bottom: 50px;
   }
   .mainsection__tittle {
-    margin-right: 0px;
+    margin-right: 0;
     margin-top: 0;
   }
   .mainsection__text {
@@ -513,9 +517,7 @@ section.contactsection div p {
     width: 70vw;
     padding: 15px 15px;
     height: auto;
-    margin-bottom: 25px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0 25px 0;
   }
   section.secondarysection article img {
     height: 100px;
@@ -535,9 +537,7 @@ section.contactsection div p {
     text-align: center;
   }
   .contactsection__button {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 20px;
+    margin: 20px 0 0 0;
   }
 }
 @media (max-width: 576px) {
@@ -568,7 +568,7 @@ section.contactsection div p {
     font-size: 2.5rem;
     margin-top: 20px;
   }
-  .secondarysection__tittle--main {
+  .secondarysection__tittle--main, .finalsection__tittle {
     font-size: 3rem;
     margin-bottom: 30px;
   }

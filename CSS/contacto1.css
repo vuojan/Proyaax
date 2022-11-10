@@ -222,6 +222,15 @@ textarea {
   margin-bottom: 30px;
   text-align: left;
 }
+.finalsection__text--nomargin {
+  color: rgb(2, 2, 2);
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  line-height: normal;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
 .finalsection__text--list {
   list-style-type: none;
   margin-bottom: 30px;

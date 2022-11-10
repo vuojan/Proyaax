@@ -146,6 +146,13 @@ textarea{
         font-size: map-get($map:$sizefont , $key:'xxs' );
         margin-bottom: 30px;
         text-align: left;
+        &--nomargin{
+            color: rgb(2, 2, 2);
+            @include font($textFont,$weightText,normal);
+            font-size: map-get($map:$sizefont , $key:'xxs' );
+            margin-bottom: 10px;
+            text-align: left;
+        }
     }
     &__text{
         &--list{
